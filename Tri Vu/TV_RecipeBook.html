@@ -1,0 +1,162 @@
+<!-- Tri Vu -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="TV_RecipeBook.css">
+</head>
+<body>
+
+    <!-- Recipe Book start (Visual) -->
+    <div id="recipe_book_wrapper">
+        <div id="recipe_book_container">
+            <img src="../Tri Vu/book_open.png" alt="Open Book" id="recipe_book_bg">
+
+            <div id="recipe_book_left_page">
+                <img id="recipe_book_fruit_image" src="" alt="Fruit">
+            </div>
+
+            <!--Description and Stats-->
+            <div id="recipe_book_right_page">
+                <h2 id="recipe_book_fruit_title"></h2>
+                <p id="recipe_book_fruit_description"></p>
+                
+                <div id="recipe_book_metadata">
+                    <div class="recipe_book_meta_item">
+                        <span>Difficulty:</span>
+                        <span id="recipe_book_difficulty"></span>
+                    </div>
+                    <div class="recipe_book_meta_item">
+                        <span>Spiciness:</span>
+                        <span id="recipe_book_spiciness"></span>
+                    </div>
+                    <div class="recipe_book_meta_item">
+                        <span>Season:</span>
+                        <span id="recipe_book_season"></span>
+                    </div>
+                </div>
+
+                <a id="recipe_book_link" href="#" target="_blank">&lt;&lt; View Recipe &gt;&gt;</a>
+            </div>
+
+            <button id="recipe_book_prev_btn">&#10094;</button>
+            <button id="recipe_book_next_btn">&#10095;</button>
+        </div>
+    </div>
+    <!-- Recipe Book end (Visual) -->
+
+</body>
+</html>
+
+<!-- Recipe Book start (Data) -->
+<script>
+    const Season = {
+        SPRING: "Spring 🌱",
+        SUMMER: "Summer ☀️",
+        AUTUMN: "Autumn 🍁",
+        WINTER: "Winter ❄️"
+    };
+
+    class RecipeEntry {
+        constructor(image, link, name, description, difficulty, spiciness, season) {
+            this.image = image;             // String
+            this.link = link;               // String
+            this.name = name;               // String
+            this.description = description; // String
+            this.difficulty = difficulty;   // Integer
+            this.spiciness = spiciness;     // Integer
+            this.season = season;           // Enum
+        }
+    }
+
+    const recipe_book_fruit_data = [
+        // Add more items here ************************************ <!--Important to refer to correct folder for IMAGE and LINK--> ********************************************************
+        new RecipeEntry(
+            "../Tri Vu/apple.jpg", 
+            "../Tri Vu/apple.html", 
+            "apple", 
+            "Apples are popular citrus-free fruits containing high amounts of fiber and vitamin C. They grow on small deciduous trees and come in a wide variety of bright red, green, and yellow cultivars.",
+            2,
+            1,
+            Season.SPRING
+        ),
+        new RecipeEntry(
+            "../Tri Vu/banana.jpg", 
+            "../Tri Vu/banana.html",
+            "banana", 
+            "Bananas are elongated, edible fruits produced by several kinds of large herbaceous flowering plants. They are rich in potassium, carbohydrates, and provide a quick source of natural energy.",
+            1,
+            2,
+            Season.SUMMER
+        ),
+        new RecipeEntry(
+            "../Tri Vu/orange.jpg", 
+            "../Tri Vu/orange.html",
+            "orange", 
+            "Oranges are a type of citrus fruit known for their sweet and tangy flavor profile. They are packed with essential vitamins, particularly vitamin C, and have a thick, pebbled outer rind.",
+            2,
+            3,
+            Season.AUTUMN
+        ),
+        new RecipeEntry(
+            "../Tri Vu/coconut.jpg", 
+            "../Tri Vu/coconut.html",
+            "coconut", 
+            "Coconuts are the large, hard-shelled seeds of the coconut palm. Inside, they contain sweet refreshing coconut water and a thick white edible flesh rich in natural oils.",
+            4,
+            4,
+            Season.WINTER
+        )
+    ];
+</script>
+<!-- Recipe Book end (Data) -->
+
+<!-- Recipe Book start (Logic) -->
+<script>
+    let recipe_book_current_index = 0;
+    const recipe_book_img_element = document.getElementById("recipe_book_fruit_image");
+    const recipe_book_title_element = document.getElementById("recipe_book_fruit_title");
+    const recipe_book_desc_element = document.getElementById("recipe_book_fruit_description");
+    const recipe_book_diff_element = document.getElementById("recipe_book_difficulty");
+    const recipe_book_spice_element = document.getElementById("recipe_book_spiciness");
+    const recipe_book_season_element = document.getElementById("recipe_book_season");
+    const recipe_book_link_element = document.getElementById("recipe_book_link");
+    const recipe_book_prev_btn = document.getElementById("recipe_book_prev_btn");
+    const recipe_book_next_btn = document.getElementById("recipe_book_next_btn");
+
+    function generateStars(rating, color) {
+        let stars = "";
+        for (let i = 1; i <= 5; i++) {
+            if (i <= rating) {
+                stars += `<span class="star" style="color: ${color};">&#9733;</span>`;
+            } else {
+                stars += '<span class="star empty">&#9734;</span>';
+            }
+        }
+        return stars;
+    }
+
+    function recipe_book_update_content() {
+        const currentRecipe = recipe_book_fruit_data[recipe_book_current_index];
+        recipe_book_img_element.src = currentRecipe.image;
+        recipe_book_title_element.textContent = currentRecipe.name;
+        recipe_book_desc_element.textContent = currentRecipe.description;
+        recipe_book_diff_element.innerHTML = generateStars(currentRecipe.difficulty, "#6a0dad");
+        recipe_book_spice_element.innerHTML = generateStars(currentRecipe.spiciness, "#8b0000");
+        recipe_book_season_element.textContent = currentRecipe.season;
+        recipe_book_link_element.href = currentRecipe.link;
+    }
+
+    recipe_book_next_btn.addEventListener("click", () => {
+        recipe_book_current_index = (recipe_book_current_index + 1) % recipe_book_fruit_data.length;
+        recipe_book_update_content();
+    });
+
+    recipe_book_prev_btn.addEventListener("click", () => {
+        recipe_book_current_index = (recipe_book_current_index - 1 + recipe_book_fruit_data.length) % recipe_book_fruit_data.length;
+        recipe_book_update_content();
+    });
+
+    recipe_book_update_content();
+</script>
+<!-- Recipe Book end (Logic) -->

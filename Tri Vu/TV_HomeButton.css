@@ -1,0 +1,21 @@
+/* Tri Vu */
+.logo-link {
+    display: inline-block;
+}
+
+.logo-img {
+    height: 180px;
+    width: auto;
+}
+
+.logo-link .hover-logo {
+    display: none;
+}
+
+.logo-link:hover .default-logo {
+    display: none;
+}
+
+.logo-link:hover .hover-logo {
+    display: inline;
+}
