@@ -10,7 +10,7 @@
     <!-- Recipe Book start (Visual) -->
     <div id="recipe_book_wrapper">
         <div id="recipe_book_container">
-            <img src="../Tri Vu/book_open.png" alt="Open Book" id="recipe_book_bg">
+            <img src="../Tri Vu/Images/book_open.png" alt="Open Book" id="recipe_book_bg">
 
             <div id="recipe_book_left_page">
                 <img id="recipe_book_fruit_image" src="" alt="Fruit">
@@ -20,7 +20,7 @@
             <div id="recipe_book_right_page">
                 <h2 id="recipe_book_fruit_title"></h2>
                 <p id="recipe_book_fruit_description"></p>
-                
+
                 <div id="recipe_book_metadata">
                     <div class="recipe_book_meta_item">
                         <span>Difficulty:</span>
@@ -36,11 +36,11 @@
                     </div>
                 </div>
 
-                <a id="recipe_book_link" href="#" target="_blank">&lt;&lt; View Recipe &gt;&gt;</a>
+                <a id="recipe_book_link" href="#" target="_blank"><< View Recipe >></a>
             </div>
 
-            <button id="recipe_book_prev_btn">&#10094;</button>
-            <button id="recipe_book_next_btn">&#10095;</button>
+            <button id="recipe_book_prev_btn">❮</button>
+            <button id="recipe_book_next_btn">❯</button>
         </div>
     </div>
     <!-- Recipe Book end (Visual) -->
@@ -72,36 +72,36 @@
     const recipe_book_fruit_data = [
         // Add more items here ************************************ <!--Important to refer to correct folder for IMAGE and LINK--> ********************************************************
         new RecipeEntry(
-            "../Tri Vu/apple.jpg", 
-            "../Tri Vu/apple.html", 
-            "apple", 
+            "../Tri Vu/Images/apple.jpg",
+            "../Tri Vu/apple.html",
+            "apple",
             "Apples are popular citrus-free fruits containing high amounts of fiber and vitamin C. They grow on small deciduous trees and come in a wide variety of bright red, green, and yellow cultivars.",
             2,
             1,
             Season.SPRING
         ),
         new RecipeEntry(
-            "../Tri Vu/banana.jpg", 
+            "../Tri Vu/Images/banana.jpg",
             "../Tri Vu/banana.html",
-            "banana", 
+            "banana",
             "Bananas are elongated, edible fruits produced by several kinds of large herbaceous flowering plants. They are rich in potassium, carbohydrates, and provide a quick source of natural energy.",
             1,
             2,
             Season.SUMMER
         ),
         new RecipeEntry(
-            "../Tri Vu/orange.jpg", 
+            "../Tri Vu/Images/orange.jpg",
             "../Tri Vu/orange.html",
-            "orange", 
+            "orange",
             "Oranges are a type of citrus fruit known for their sweet and tangy flavor profile. They are packed with essential vitamins, particularly vitamin C, and have a thick, pebbled outer rind.",
             2,
             3,
             Season.AUTUMN
         ),
         new RecipeEntry(
-            "../Tri Vu/coconut.jpg", 
+            "../Tri Vu/Images/coconut.jpg",
             "../Tri Vu/coconut.html",
-            "coconut", 
+            "coconut",
             "Coconuts are the large, hard-shelled seeds of the coconut palm. Inside, they contain sweet refreshing coconut water and a thick white edible flesh rich in natural oils.",
             4,
             4,
@@ -110,7 +110,6 @@
     ];
 </script>
 <!-- Recipe Book end (Data) -->
-
 <!-- Recipe Book start (Logic) -->
 <script>
     let recipe_book_current_index = 0;
@@ -128,9 +127,9 @@
         let stars = "";
         for (let i = 1; i <= 5; i++) {
             if (i <= rating) {
-                stars += `<span class="star" style="color: ${color};">&#9733;</span>`;
+                stars += `<span class="star" style="color: ${color};">★</span>`;
             } else {
-                stars += '<span class="star empty">&#9734;</span>';
+                stars += '<span class="star empty">☆</span>';
             }
         }
         return stars;
