@@ -23,11 +23,11 @@
         <nav>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    Daphnie Jones
+                    Breakfast
                     <ul class="nav-dropdown">
-                        <li class="nav-dropdown-item"><a href="Daphnie Jones/DJ_Page1.html" class="nav-link">DJ Page 1</a></li>
-                        <li class="nav-dropdown-item"><a href="Daphnie Jones/DJ_Page2.html" class="nav-link">DJ Page 2</a></li>
-                        <li class="nav-dropdown-item"><a href="Daphnie Jones/DJ_Page3.html" class="nav-link">DJ Page 3</a></li>
+                        <li class="nav-dropdown-item"><a href="Daphnie Jones/DJ_Page1.html#quesadilla" class="nav-link">Quesadilla</a></li>
+                        <li class="nav-dropdown-item"><a href="Daphnie Jones/DJ_Page1.html#french-toast" class="nav-link">French Toast</a></li>
+                        <li class="nav-dropdown-item"><a href="Daphnie Jones/DJ_Page1.html#crepes" class="nav-link">Crepes</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -70,14 +70,6 @@
                         <li class="nav-dropdown-item"><a href="Michelle Wilborn/MW_Page3.html" class="nav-link">MW Page 3</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    Tri Vu
-                    <ul class="nav-dropdown">
-                        <li class="nav-dropdown-item"><a href="Tri Vu/TV_Page1.html" class="nav-link">TV Page 1</a></li>
-                        <li class="nav-dropdown-item"><a href="Tri Vu/TV_Page2.html" class="nav-link">TV Page 2</a></li>
-                        <li class="nav-dropdown-item"><a href="Tri Vu/TV_Page3.html" class="nav-link">TV Page 3</a></li>
-                    </ul>
-                </li>
             </ul>
         </nav>
         <!--Navigation End-->
@@ -89,7 +81,7 @@
             <img src="Tri Vu/Images/book_open.png" alt="Open Book" id="recipe_book_bg">
 
             <div id="recipe_book_left_page">
-                <img id="recipe_book_fruit_image" src="" alt="Fruit">
+                <img id="recipe_book_fruit_image" src="" alt="Recipe Image">
             </div>
 
             <!--Description and Stats-->
@@ -145,6 +137,34 @@
     }
 
     const recipe_book_fruit_data = [
+        // Daphnie Jones
+        new RecipeEntry(
+            "Daphnie Jones/Images/something.jpg",
+            "Daphnie Jones/DJ_Page1.html#quesadilla",
+            "Breakfast Quesadilla",
+            "A warm tortilla filled with eggs, cheese, and your favorite breakfast ingredients.",
+            2,
+            1,
+            Season.SPRING
+        ),
+        new RecipeEntry(
+            "Daphnie Jones/Images/something.jpg",
+            "Daphnie Jones/DJ_Page1.html#french-toast",
+            "French Toast",
+            "Sweet, golden slices of bread cooked in an egg and cinnamon mixture.",
+            2,
+            0,
+            Season.SPRING
+        ),
+        new RecipeEntry(
+            "Daphnie Jones/Images/something.jpg",
+            "Daphnie Jones/DJ_Page1.html#crepes",
+            "Crepes",
+            "Thin, soft pancakes that can be filled with fruit, chocolate, or other toppings.",
+            3,
+            0,
+            Season.SPRING
+        ),
         new RecipeEntry(
             "Tri Vu/Images/apple.jpg",
             "Tri Vu/apple.html",
