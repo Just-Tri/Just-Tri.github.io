@@ -20,3 +20,47 @@ h3 {
     font-family: "Archivo Black", sans-serif;
     color: #1e1b4b;
 }
+
+/* footer */
+.foot footer {
+margin: auto;
+top: auto;
+height: auto;
+}
+
+.foot h3 {
+text-decoration: overline black 2px;
+color: white;
+font-weight: bold;
+}
+.foot {
+text-align: center;
+background-color: #f54927;
+}
+
+.foot a {
+color: black;
+}
+#top {
+text-align: left;
+}
+
+/* header */
+.lglk {
+display: inline-block;
+}
+.imgbk {
+height: 180px;
+width: auto;
+border: none;
+}
+
+.lglk .opbk {
+display: none;
+} 
+.lglk:hover .lgbk{
+display: none;
+}
+.lglk:hover .opbk {
+display: inline;
+}
