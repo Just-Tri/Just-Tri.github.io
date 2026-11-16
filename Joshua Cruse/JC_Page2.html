@@ -2,14 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Recipe Book | Recipe Details</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book | Recipe Details</title>
     <link rel="stylesheet" href="../default_setting.css" />
     <link rel="stylesheet" href="../Tri Vu/TV_HomeButton.css" />
-
+</head>
 <body>
- 	<header>
+    <header>
         <!-- Home Page button start -->
         <div>
             <center>
@@ -20,89 +20,87 @@
             </center>
         </div>
         <!-- Home Page button end -->
-		</header>
+    </header>
 
-		<nav aria-label="Main navigation">
-			<a href="#recipe">Recipes</a>
-			<a href="#ingredients">Ingredients</a>
-			<a href="#instructions">Instructions</a>
-			<a href="#notes">My notes</a>
-		</nav>
+    <nav aria-label="Main navigation">
+        <a href="#recipe">Recipes</a>
+        <a href="#ingredients">Ingredients</a>
+        <a href="#instructions">Instructions</a>
+        <a href="#notes">My notes</a>
+    </nav>
 
-		<main id="recipe">
-			<p class="breadcrumbs">Home&nbsp; / &nbsp;Recipe Book&nbsp; / &nbsp;Dinner</p>
-			<div class="recipe-heading">
-				<div>
-					<p>RECIPE CATEGORY: DINNER</p>
-					<h1>Beef & Vegetable Soup</h1>
-				</div>
-				<div class="actions">
-					<button type="button" id="save-recipe" aria-pressed="false">☆ Save recipe</button>
-					<button type="button" onclick="window.print()">Print</button>
-				</div>
-			</div>
-			<p class="summary">A warm and classic southern beef & vegetable soup perfect for colder weather.</p>
+    <main id="recipe">
+        <p class="breadcrumbs">Home&nbsp; / &nbsp;Recipe Book&nbsp; / &nbsp;Dinner</p>
+        <div class="recipe-heading">
+            <div>
+                <p>RECIPE CATEGORY: DINNER</p>
+                <h1>Beef & Vegetable Soup</h1>
+            </div>
+            <div class="actions">
+                <button type="button" id="save-recipe" aria-pressed="false">☆ Save recipe</button>
+                <button type="button" onclick="window.print()">Print</button>
+            </div>
+        </div>
+        <p class="summary">A warm and classic southern beef & vegetable soup perfect for colder weather.</p>
 
-			<div class="recipe-layout">
-				<section class="panel" aria-label="Recipe photo and details">
-					<img
-						class="photo-placeholder recipe-photo"
-						src=Ground-Beef-Vegetable-Soup-Hamburger-Julias-Simply-Southern-1024x576.jpg
-						alt="Beef & Veggie soup dish"
-						aria-label="Recipe photo"
-					>
-					<div class="meta">
-						<div><strong>Prep</strong><span>15 min</span></div>
-						<div><strong>Cook</strong><span>1 hr</span></div>
-						<div><strong>Serves</strong><span>4 people</span></div>
-					</div>
-				</section>
+        <div class="recipe-layout">
+            <section class="panel" aria-label="Recipe photo and details">
+                <img class="photo-placeholder recipe-photo"
+                     src="Ground-Beef-Vegetable-Soup-Hamburger-Julias-Simply-Southern-1024x576.jpg"
+                     alt="Beef & Veggie soup dish"
+                     aria-label="Recipe photo">
+                <div class="meta">
+                    <div><strong>Prep</strong><span>15 min</span></div>
+                    <div><strong>Cook</strong><span>1 hr</span></div>
+                    <div><strong>Serves</strong><span>4 people</span></div>
+                </div>
+            </section>
 
-				<section class="panel" id="ingredients">
-					<h2>Ingredients</h2>
-					<p>Servings: <strong id="serving-count" aria-live="polite">4</strong> &nbsp; <button type="button" id="decrease-servings" aria-label="Decrease servings">−</button> <button type="button" id="increase-servings" aria-label="Increase servings">+</button></p>
-					<ul class="ingredients">
-						<li><label><input type="checkbox"> <span data-amount="1">1</span> tsp Olive Oil </label></li>
-						<li><label><input type="checkbox"> <span data-amount="1">1</span> LB of ground beef</label></li>
-						<li><label><input type="checkbox"> <span data-amount="1">1</span> Onion diced</label></li>
-						<li><label><input type="checkbox"> <span data-amount="1">1</span> Celery diced</label></li>
-						<li><label><input type="checkbox"> <span data-amount="1">1</span>Carrot peeled & sliced</label></li>
-						<li><label><input type="checkbox"> <span data-amount="1">1</span>Russet Potato peeled & sliced</label></li>
-						<li><label><input type="checkbox"> <span data-amount="4">4</span>Sprigs Fresh Thyme</label></li>
-						<li><label><input type="checkbox"> <span data-amount="1">1</span>Bay leaf</label></li>
-						<li><label><input type="checkbox"> <span data-amount="1.5">1.5</span>tsp Salt</label></li>
-                        <li><label><input type="checkbox"> <span data-amount="0.5">0.5</span>tsp pepper</label></li>
-                        <li><label><input type="checkbox"> <span data-amount="0.5">0.5</span>tsp Italian Seasoning</label></li>
-                        <li><label><input type="checkbox"> <span data-amount="4">4</span>cups Beef stock</label></li>
-                        <li><label><input type="checkbox"> <span data-amount="2">2</span>tsp Better than Bouillon</label></li>
-                        <li><label><input type="checkbox"> <span data-amount="1">1</span>(14.5) oz can Cut Green Beans</label></li>
-                        <li><label><input type="checkbox"> <span data-amount="1">1</span>(15.25) oz can Whole Kernal Corn</label></li>
-                        <li><label><input type="checkbox"> <span data-amount="1">1</span>(15.5) oz can Black Eye Peas</label></li>
-                        <li><label><input type="checkbox"> <span data-amount="1">1</span>(28) oz can Petite Diced Tomatoes</label></li>
-                        <li><label><input type="checkbox"> <span data-amount=".25">.25</span>cup Orzo Pasta</label></li>
-                        <li><label><input type="checkbox"> <span data-amount="4">4</span>cup Water</label></li>
-					</ul>
-				</section>
+            <section class="panel" id="ingredients">
+                <h2>Ingredients</h2>
+                <p>Servings: <strong id="serving-count" aria-live="polite">4</strong> &nbsp; <button type="button" id="decrease-servings" aria-label="Decrease servings">−</button> <button type="button" id="increase-servings" aria-label="Increase servings">+</button></p>
+                <ul class="ingredients">
+                    <li><label><input type="checkbox"> <span data-amount="1">1</span> tsp Olive Oil </label></li>
+                    <li><label><input type="checkbox"> <span data-amount="1">1</span> LB of ground beef</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="1">1</span> Onion diced</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="1">1</span> Celery diced</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="1">1</span>Carrot peeled & sliced</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="1">1</span>Russet Potato peeled & sliced</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="4">4</span>Sprigs Fresh Thyme</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="1">1</span>Bay leaf</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="1.5">1.5</span>tsp Salt</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="0.5">0.5</span>tsp pepper</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="0.5">0.5</span>tsp Italian Seasoning</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="4">4</span>cups Beef stock</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="2">2</span>tsp Better than Bouillon</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="1">1</span>(14.5) oz can Cut Green Beans</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="1">1</span>(15.25) oz can Whole Kernal Corn</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="1">1</span>(15.5) oz can Black Eye Peas</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="1">1</span>(28) oz can Petite Diced Tomatoes</label></li>
+                    <li><label><input type="checkbox"> <span data-amount=".25">.25</span>cup Orzo Pasta</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="4">4</span>cup Water</label></li>
+                </ul>
+            </section>
 
-				<section class="panel" id="instructions">
-					<h2>Instructions</h2>
-					<ol class="steps">
-						<li>Begin by heating a large soup pot or dutch oven over medium heat.</li>
-						<li>Next, add the olive oil and ground beef. Break up the ground beef and cook to brown.</li>
-						<li>Prepare your vegetables.</li>
-						<li>Next, add the vegetables, herbs, and seasonings to the pot with the ground beef.</li>
-						<li>Next, add the beef stock and bouillon.</li>
-						<li>Turn up the heat to medium high, cover pot with a lid and simmer for 20 minutes. </li>
-						<li>Lastly, add the canned veggies, orzo pasta and water to the pot. </li>
-						<li>Reduce the heat to medium low and simmer for 30-45 minutes.</li>
-						<li>Serve hot with a grilled pimento cheese sandwich, if desired.</li>
-					</ol>
-				</section>
+            <section class="panel" id="instructions">
+                <h2>Instructions</h2>
+                <ol class="steps">
+                    <li>Begin by heating a large soup pot or dutch oven over medium heat.</li>
+                    <li>Next, add the olive oil and ground beef. Break up the ground beef and cook to brown.</li>
+                    <li>Prepare your vegetables.</li>
+                    <li>Next, add the vegetables, herbs, and seasonings to the pot with the ground beef.</li>
+                    <li>Next, add the beef stock and bouillon.</li>
+                    <li>Turn up the heat to medium high, cover pot with a lid and simmer for 20 minutes. </li>
+                    <li>Lastly, add the canned veggies, orzo pasta and water to the pot. </li>
+                    <li>Reduce the heat to medium low and simmer for 30-45 minutes.</li>
+                    <li>Serve hot with a grilled pimento cheese sandwich, if desired.</li>
+                </ol>
+            </section>
 
-				<section class="panel notes" id="notes">
-					<h2>Recipe notes</h2>
-					
+            <section class="panel notes" id="notes">
+                <h2>Recipe notes</h2>
 
+<<<<<<< Updated upstream
 				</section>
 			</div>
 		</main>
@@ -122,69 +120,60 @@
 		const servingCount = document.getElementById('serving-count');
 		const ingredientAmounts = document.querySelectorAll('[data-amount]');
 		let servings = 4;
+=======
+>>>>>>> Stashed changes
 
-		function updateServings(nextServings) {
-			servings = Math.max(1, Math.min(20, nextServings));
-			servingCount.textContent = servings;
-			ingredientAmounts.forEach((amount) => {
-				const scaled = Number(amount.dataset.amount) * servings / 4;
-				amount.textContent = Number.isInteger(scaled) ? scaled : Number(scaled.toFixed(2));
-			});
-		}
+            </section>
+        </div>
+    </main>
+    <footer>
+        <!--TV Recipe Book &nbsp; &nbsp; Recipe page wireframe -->
+        <div class="foot">
+            <br>
+            <h3> Contact Us </h3>
+            <p><a href="mailto:bigemail@gmail.com"> Email us here </a></p>
+            <p> Call us: (987)-654-3210 </p>
+            <p> Address: S.R.Collins Engineering Building <br> D.W. Martin Street, Prairie View, TX 77445 </p>
+            <a href="#top"> Back to Top</a> &nbsp;&nbsp;
+            <a href="../index.html"> Back to Home </a>
+        </div>
+    </footer>
+    <script>
+        const servingCount = document.getElementById('serving-count');
+        const ingredientAmounts = document.querySelectorAll('[data-amount]');
+        let servings = 4;
 
-		document.getElementById('decrease-servings').addEventListener('click', () => updateServings(servings - 1));
-		document.getElementById('increase-servings').addEventListener('click', () => updateServings(servings + 1));
+        function updateServings(nextServings) {
+            servings = Math.max(1, Math.min(20, nextServings));
+            servingCount.textContent = servings;
+            ingredientAmounts.forEach((amount) => {
+                const scaled = Number(amount.dataset.amount) * servings / 4;
+                amount.textContent = Number.isInteger(scaled) ? scaled : Number(scaled.toFixed(2));
+            });
+        }
 
-		const saveButton = document.getElementById('save-recipe');
-		const saved = localStorage.getItem('tv-recipe-saved') === 'true';
-		saveButton.setAttribute('aria-pressed', String(saved));
-		saveButton.textContent = saved ? '★ Recipe saved' : '☆ Save recipe';
-		saveButton.addEventListener('click', () => {
-			const isSaved = saveButton.getAttribute('aria-pressed') !== 'true';
-			saveButton.setAttribute('aria-pressed', String(isSaved));
-			saveButton.textContent = isSaved ? '★ Recipe saved' : '☆ Save recipe';
-			localStorage.setItem('tv-recipe-saved', String(isSaved));
-		});
-	</script>
+        document.getElementById('decrease-servings').addEventListener('click', () => updateServings(servings - 1));
+        document.getElementById('increase-servings').addEventListener('click', () => updateServings(servings + 1));
+
+        const saveButton = document.getElementById('save-recipe');
+        const saved = localStorage.getItem('tv-recipe-saved') === 'true';
+        saveButton.setAttribute('aria-pressed', String(saved));
+        saveButton.textContent = saved ? '★ Recipe saved' : '☆ Save recipe';
+        saveButton.addEventListener('click', () => {
+            const isSaved = saveButton.getAttribute('aria-pressed') !== 'true';
+            saveButton.setAttribute('aria-pressed', String(isSaved));
+            saveButton.textContent = isSaved ? '★ Recipe saved' : '☆ Save recipe';
+            localStorage.setItem('tv-recipe-saved', String(isSaved));
+        });
+    </script>
 
 
 
 </body>
 </html>
 <style>
-	
-		body {
-			margin: 0;
-			color: #222;
-		}
-		a { color: inherit; }
-		.page {
-			max-width: 1000px;
-			margin: 0 auto;
-			padding: 0 16px;
-		}
-		header {
-			align-items: center;
-			justify-content: space-between;
-			gap: 1rem;
-			padding: 18px 0;
-			border-bottom: 1px solid #ddd;
-		}
-		.brand {
-			display: flex;
-			align-items: center;
-			gap: 10px;
-			margin: 0;
-			font-size: 1.2rem;
-			font-weight: 700;
-		}
-		.brand-logo {
-			width: 40px;
-			height: 40px;
-			flex: none;
-			border: 1px solid #ccc;
-		}
 
+<<<<<<< Updated upstream
 		nav {
 			display: flex;
 			align-items: center;
@@ -294,3 +283,197 @@
 			.recipe-layout { grid-template-columns: 1fr; }
 			nav { flex-wrap: wrap; }
 		}
+=======
+    body {
+        margin: 0;
+        color: #222;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .page {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 16px;
+    }
+
+    header {
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 18px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .brand-logo {
+        width: 40px;
+        height: 40px;
+        flex: none;
+        border: 1px solid #ccc;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 12px;
+        margin-top: 12px;
+        padding: 10px 12px;
+        border: 1px solid #d5dce5;
+        border-radius: 10px;
+        background: #f3f6fa;
+    }
+
+        nav a {
+            flex: 1;
+            padding: 9px 12px;
+            border-radius: 6px;
+            color: #263b53;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color .2s ease, color .2s ease;
+        }
+
+            nav a:hover, nav a:focus-visible {
+                background: #263b53;
+                color: #fff;
+            }
+
+    main {
+        padding: 24px 0 36px;
+    }
+
+    .breadcrumbs {
+        color: #666;
+        font-size: .9rem;
+    }
+
+    .recipe-heading {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: end;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 12px;
+    }
+
+    h1 {
+        margin: 6px 0;
+        font-size: clamp(2rem, 5vw, 2.5rem);
+    }
+
+    .actions {
+        display: flex;
+        gap: 8px;
+    }
+
+    button {
+        padding: 8px 12px;
+        border: 1px solid #777;
+        background: #fff;
+        font: inherit;
+        cursor: pointer;
+    }
+
+    .summary {
+        max-width: 720px;
+        margin: 0 0 20px;
+        line-height: 1.5;
+    }
+
+    .recipe-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.5fr) minmax(250px, 1fr);
+        gap: 20px;
+    }
+
+    .panel {
+        padding: 16px;
+        border: 1px solid #ccc;
+        background: #fafafa;
+    }
+
+    .photo-placeholder {
+        display: block;
+        width: 100%;
+        min-height: 220px;
+        border: 1px dashed #999;
+        background: #f3f3f3;
+        color: #555;
+        overflow: hidden;
+    }
+
+    .recipe-photo {
+        display: block;
+        width: min(100%, 420px);
+        height: auto;
+        min-height: 0;
+        margin: 0 auto;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .meta {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 16px;
+    }
+
+        .meta div {
+            padding: 10px;
+            border: 1px solid #d7d7d7;
+            text-align: center;
+            background: #fff;
+        }
+
+        .meta strong, .meta span {
+            display: block;
+        }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    .ingredients li, .steps li {
+        padding: 4px 0;
+        line-height: 1.4;
+    }
+
+    .ingredients input {
+        margin-right: 8px;
+    }
+
+    .steps {
+        padding-left: 20px;
+    }
+
+    .notes {
+        min-height: 110px;
+        border-style: dashed;
+        color: #555;
+    }
+
+    @media (max-width: 720px) {
+        .recipe-layout {
+            grid-template-columns: 1fr;
+        }
+
+        nav {
+            flex-wrap: wrap;
+        }
+    }
+</style>
+>>>>>>> Stashed changes
