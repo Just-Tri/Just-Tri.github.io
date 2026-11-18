@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../Tri Vu/TV_HomeButton.css" />
 </head>
 <body>
- 	<header>
+    <header>
         <!-- Home Page button start -->
         <div>
             <center>
@@ -20,305 +20,325 @@
             </center>
         </div>
         <!-- Home Page button end -->
-		</header>
+    </header>
 
-<!-- quick recipe menu
-<center>
-<nav class="qkmenu">
-<a href="JC_Page2.html"> Beef and Vegetable Soup </a>
-&nbsp;&nbsp;
-<a href="JC_Page3.html"> Loaded Baked Potato Soup </a>
-</center>
-</nav>
- end quick recipe menu -->
+    <nav aria-label="Main navigation">
+        <a href="#recipe">Recipes</a>
+        <a href="#ingredients">Ingredients</a>
+        <a href="#instructions">Instructions</a>
+        <a href="#notes">My notes</a>
+    </nav>
 
-		<nav aria-label="Main navigation">
-			<a href="#recipe">Recipes</a>
-			<a href="#ingredients">Ingredients</a>
-			<a href="#instructions">Instructions</a>
-			<a href="#notes">My notes</a>
-		</nav>
+    <main id="recipe">
+        <p class="breadcrumbs">Home&nbsp; / &nbsp;Recipe Book&nbsp; / &nbsp;Dinner</p>
+        <div class="recipe-heading">
+            <div>
+                <p>RECIPE CATEGORY: DINNER</p>
+                <h1>Chicken & Dumplings</h1>
+            </div>
+            <div class="actions">
+                <button type="button" id="save-recipe" aria-pressed="false">☆ Save recipe</button>
+                <button type="button" onclick="window.print()">Print</button>
+            </div>
+        </div>
+        <p class="summary">A cozy, comforting chicken and dumplings dish with tender chicken, savory broth, and fluffy dumplings.</p>
 
-		<main id="recipe">
-			<p class="breadcrumbs">Home&nbsp; / &nbsp;Recipe Book&nbsp; / &nbsp;Dinner</p>
-			<div class="recipe-heading">
-				<div>
-					<p>RECIPE CATEGORY: DINNER</p>
-					<h1>Chicken & Dumplings</h1>
-				</div>
-				<div class="actions">
-					<button type="button" id="save-recipe" aria-pressed="false">☆ Save recipe</button>
-					<button type="button" onclick="window.print()">Print</button>
-				</div>
-			</div>
-			<p class="summary">A cozy, comforting chicken and dumplings dish with tender chicken, savory broth, and fluffy dumplings.</p>
+        <div class="recipe-layout">
+            <section class="panel" aria-label="Recipe photo and details">
+                <img class="photo-placeholder recipe-photo"
+                     src="218562-Super-Easy-Chicken-Dumplings-DDMFS-2x1-0649-0161b5d85cde43ebbbd8654b96edddf9.jpg"
+                     alt="Chicken and dumplings dish"
+                     aria-label="Recipe photo">
+                <div class="meta">
+                    <div><strong>Prep</strong><span>35 min</span></div>
+                    <div><strong>Cook</strong><span>45 min</span></div>
+                    <div><strong>Serves</strong><span>6 people</span></div>
+                </div>
+            </section>
 
-			<div class="recipe-layout">
-				<section class="panel" aria-label="Recipe photo and details">
-					<img
-						class="photo-placeholder recipe-photo"
-						src="218562-Super-Easy-Chicken-Dumplings-DDMFS-2x1-0649-0161b5d85cde43ebbbd8654b96edddf9.jpg"
-						alt="Chicken and dumplings dish"
-						aria-label="Recipe photo"
-					>
-					<div class="meta">
-						<div><strong>Prep</strong><span>35 min</span></div>
-						<div><strong>Cook</strong><span>45 min</span></div>
-						<div><strong>Serves</strong><span>6 people</span></div>
-					</div>
-				</section>
+            <section class="panel" id="ingredients">
+                <h2>Ingredients</h2>
+                <p>Servings: <strong id="serving-count" aria-live="polite">6</strong> &nbsp; <button type="button" id="decrease-servings" aria-label="Decrease servings">−</button> <button type="button" id="increase-servings" aria-label="Increase servings">+</button></p>
+                <ul class="ingredients">
+                    <li><label><input type="checkbox"> <span data-amount="3">3</span> boneless, skinless chicken breasts</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="1">1</span> stick of butter</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="1">1</span> (10.5) ounce can of cream of chicken soup</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="2">2</span> cups self rising flour</label></li>
+                    <li><label><input type="checkbox"> <span data-amount=".25">.25</span>teaspoon Salt</label></li>
+                    <li><label><input type="checkbox"> Cracked or course ground black pepper</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="80">80</span>mls of canola oil</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="1">1</span>Large Egg</label></li>
+                    <li><label><input type="checkbox"> <span data-amount="1">1</span>tablespoon cold water if needed</label></li>
+                </ul>
+            </section>
 
-				<section class="panel" id="ingredients">
-					<h2>Ingredients</h2>
-					<p>Servings: <strong id="serving-count" aria-live="polite">6</strong> &nbsp; <button type="button" id="decrease-servings" aria-label="Decrease servings">−</button> <button type="button" id="increase-servings" aria-label="Increase servings">+</button></p>
-					<ul class="ingredients">
-						<li><label><input type="checkbox"> <span data-amount="3">3</span> boneless, skinless chicken breasts</label></li>
-						<li><label><input type="checkbox"> <span data-amount="1">1</span> stick of butter</label></li>
-						<li><label><input type="checkbox"> <span data-amount="1">1</span> (10.5) ounce can of cream of chicken soup</label></li>
-						<li><label><input type="checkbox"> <span data-amount="2">2</span> cups self rising flour</label></li>
-						<li><label><input type="checkbox"> <span data-amount=".25">.25</span>teaspoon Salt</label></li>
-						<li><label><input type="checkbox"> Cracked or course ground black pepper</label></li>
-						<li><label><input type="checkbox"> <span data-amount="80">80</span>mls of canola oil</label></li>
-						<li><label><input type="checkbox"> <span data-amount="1">1</span>Large Egg</label></li>
-						<li><label><input type="checkbox"> <span data-amount="1">1</span>tablespoon cold water if needed</label></li>
-					</ul>
-				</section>
+            <section class="panel" id="instructions">
+                <h2>Instructions</h2>
+                <ol class="steps">
+                    <li>Add water (about 12-14 cups) to a large stock pot, generously salt and bring to a boil over high heat on the stove top. Add chicken breasts and allow to cook until fully done. (They usually float when done.) Remove breasts from broth/water to set aside and cool. Turn heat down to medium-low and <strong>keep broth at a low boil on the stove top.</strong></li>
+                    <li>Add butter, cream of chicken soup and a generous amount of cracked black pepper to the boiling chicken broth and let melt while moving onto the next steps.</li>
+                    <li>In a medium bowl, stir together flour and salt. Make a little well in the flour and add the oil and egg. Mix together using a fork. Dough should be loose (or shaggy) but form a ball when pressed together. Add 1-2 tablespoon water if dough is too dry.</li>
+                    <li>Turn your dough ball out onto a well floured surface. Tear off about ⅓ of the dough and, using a floured rolling pin, roll out to ¼ inch thickness or thinner.</li>
+                    <li>Cut dough into approximately 1 inch squares (using a butter knife or pizza cutter). </li>
+                    <li>Toss the squares in the extra flour from the floured surface.<strong> This will keep the dumplings from dissolving or sticking together as they cook and thicken your boiling broth</strong> at the same time.Add them a few a time + the flour from the floured surface to the broth. Re-flour your surface and repeat until all of the dough has been used. </li>
+                    <li>Shred cooled chicken breasts and add.</li>
+                    <li>As dumplings begin to cook and soak up the broth, they will sink to the bottom. So stir frequently but gently. When dumplings turn white and begin to float, they are done. This usually takes about 20-30 minutes.</li>
+                    <li>Add more pepper as desired. Serve.</li>
+                </ol>
+            </section>
 
-				<section class="panel" id="instructions">
-					<h2>Instructions</h2>
-					<ol class="steps">
-						<li>Add water (about 12-14 cups) to a large stock pot, generously salt and bring to a boil over high heat on the stove top. Add chicken breasts and allow to cook until fully done. (They usually float when done.) Remove breasts from broth/water to set aside and cool. Turn heat down to medium-low and <strong>keep broth at a low boil on the stove top.</strong></li>
-						<li>Add butter, cream of chicken soup and a generous amount of cracked black pepper to the boiling chicken broth and let melt while moving onto the next steps.</li>
-						<li>In a medium bowl, stir together flour and salt. Make a little well in the flour and add the oil and egg. Mix together using a fork. Dough should be loose (or shaggy) but form a ball when pressed together. Add 1-2 tablespoon water if dough is too dry.</li>
-						<li>Turn your dough ball out onto a well floured surface. Tear off about ⅓ of the dough and, using a floured rolling pin, roll out to ¼ inch thickness or thinner.</li>
-						<li>Cut dough into approximately 1 inch squares (using a butter knife or pizza cutter). </li>
-						<li>Toss the squares in the extra flour from the floured surface.<strong> This will keep the dumplings from dissolving or sticking together as they cook and thicken your boiling broth</strong> at the same time.Add them a few a time + the flour from the floured surface to the broth. Re-flour your surface and repeat until all of the dough has been used. </li>
-						<li>Shred cooled chicken breasts and add.</li>
-						<li>As dumplings begin to cook and soak up the broth, they will sink to the bottom. So stir frequently but gently. When dumplings turn white and begin to float, they are done. This usually takes about 20-30 minutes.</li>
-						<li>Add more pepper as desired. Serve.</li>
-					</ol>
-				</section>
+            <section class="panel notes" id="notes">
+                <h2>Recipe notes</h2>
+                <ul class="panel notes">
+                    <li><strong>Use a pot larger than you think you might need </strong>so there is plenty of room for the dumplings to move around while boiling. If they don’t have plenty of room to move, they will clump together.</li>
+                    <li><strong>Begin making your dumplings when you put the ckicken on the boil.</strong>This kind of multi-tasking can save time.</li>
+                    <li><strong>If your dumplings are gummy, still taste like flour, or aren’t soft and light,</strong> then they haven’t simmered long enough. Just be patient and let them simmer a bit longer.</li>
+                    <li><strong>Remember to toss the dumplings in flour + add the flour</strong> from your floured surface <strong>every time</strong> you cut and add dumplings to the pot.<strong> This is what thickens your recipe.</strong></li>
+                </ul>
 
-				<section class="panel notes" id="notes">
-					<h2>Recipe notes</h2>
-					<ul class="panel notes"> 
-						<li><strong>Use a pot larger than you think you might need </strong>so there is plenty of room for the dumplings to move around while boiling. If they don’t have plenty of room to move, they will clump together.</li>
-						<li><strong>Begin making your dumplings when you put the ckicken on the boil.</strong>This kind of multi-tasking can save time.</li>
-						<li><strong>If your dumplings are gummy, still taste like flour, or aren’t soft and light,</strong> then they haven’t simmered long enough. Just be patient and let them simmer a bit longer.</li>
-						<li><strong>Remember to toss the dumplings in flour + add the flour</strong> from your floured surface <strong>every time</strong> you cut and add dumplings to the pot.<strong> This is what thickens your recipe.</strong></li>
-					</ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <!-- TV Recipe Book &nbsp;·&nbsp; Recipe page wireframe -->
+        <div class="foot">
+            <br>
+            <h3> Contact Us </h3>
+            <p><a href="mailto:bigemail@gmail.com"> Email us here </a></p>
+            <p> Call us: (987)-654-3210 </p>
+            <p> Address: S.R.Collins Engineering Building <br> D.W. Martin Street, Prairie View, TX 77445 </p>
+            <a href="#top"> Back to Top</a> &nbsp;&nbsp;
+            <a href="index.html"> Back to Home </a>
+        </div>
+    </footer>
+    <script>
+        const servingCount = document.getElementById('serving-count');
+        const ingredientAmounts = document.querySelectorAll('[data-amount]');
+        let servings = 4;
 
-				</section>
-			</div>
-		</main>
-<!-- quick recipe menu
-<center>
-<nav class="qkmenu">
-<a href="JC_Page2.html"> Beef and Vegetable Soup </a>
-&nbsp;&nbsp;
-<a href="JC_Page3.html"> Loaded Baked Potato Soup </a>
-</center>
-</nav>
-<br>
- end quick recipe menu -->
+        function updateServings(nextServings) {
+            servings = Math.max(1, Math.min(20, nextServings));
+            servingCount.textContent = servings;
+            ingredientAmounts.forEach((amount) => {
+                const scaled = Number(amount.dataset.amount) * servings / 4;
+                amount.textContent = Number.isInteger(scaled) ? scaled : Number(scaled.toFixed(2));
+            });
+        }
 
-		<footer> <!-- TV Recipe Book &nbsp;·&nbsp; Recipe page wireframe -->
-			<div class="foot">
-				<br>
-				<h3> Contact Us </h3>
-				<p><a href="mailto:bigemail@gmail.com"> Email us here </a></p>
-				<p> Call us: (987)-654-3210 </p>
-				<p> Address: S.R.Collins Engineering Building <br> D.W. Martin Street, Prairie View, TX 77445 </p>
-				<a href="#top"> Back to Top</a> &nbsp;&nbsp;
-				<a href="index.html"> Back to Home </a>
-			</div>
-		</footer>
-	<script>
-		const servingCount = document.getElementById('serving-count');
-		const ingredientAmounts = document.querySelectorAll('[data-amount]');
-		let servings = 4;
+        document.getElementById('decrease-servings').addEventListener('click', () => updateServings(servings - 1));
+        document.getElementById('increase-servings').addEventListener('click', () => updateServings(servings + 1));
 
-		function updateServings(nextServings) {
-			servings = Math.max(1, Math.min(20, nextServings));
-			servingCount.textContent = servings;
-			ingredientAmounts.forEach((amount) => {
-				const scaled = Number(amount.dataset.amount) * servings / 4;
-				amount.textContent = Number.isInteger(scaled) ? scaled : Number(scaled.toFixed(2));
-			});
-		}
-
-		document.getElementById('decrease-servings').addEventListener('click', () => updateServings(servings - 1));
-		document.getElementById('increase-servings').addEventListener('click', () => updateServings(servings + 1));
-
-		const saveButton = document.getElementById('save-recipe');
-		const saved = localStorage.getItem('tv-recipe-saved') === 'true';
-		saveButton.setAttribute('aria-pressed', String(saved));
-		saveButton.textContent = saved ? '★ Recipe saved' : '☆ Save recipe';
-		saveButton.addEventListener('click', () => {
-			const isSaved = saveButton.getAttribute('aria-pressed') !== 'true';
-			saveButton.setAttribute('aria-pressed', String(isSaved));
-			saveButton.textContent = isSaved ? '★ Recipe saved' : '☆ Save recipe';
-			localStorage.setItem('tv-recipe-saved', String(isSaved));
-		});
-	</script>
+        const saveButton = document.getElementById('save-recipe');
+        const saved = localStorage.getItem('tv-recipe-saved') === 'true';
+        saveButton.setAttribute('aria-pressed', String(saved));
+        saveButton.textContent = saved ? '★ Recipe saved' : '☆ Save recipe';
+        saveButton.addEventListener('click', () => {
+            const isSaved = saveButton.getAttribute('aria-pressed') !== 'true';
+            saveButton.setAttribute('aria-pressed', String(isSaved));
+            saveButton.textContent = isSaved ? '★ Recipe saved' : '☆ Save recipe';
+            localStorage.setItem('tv-recipe-saved', String(isSaved));
+        });
+    </script>
 
 
 
 </body>
 </html>
 <style>
-	
-		body {
-			margin: 0;
-			color: #222;
-		}
-		a { color: inherit; }
-		.page {
-			max-width: 1000px;
-			margin: 0 auto;
-			padding: 0 16px;
-		}
-		header {
-			align-items: center;
-			justify-content: space-between;
-			gap: 1rem;
-			padding: 18px 0;
-			border-bottom: 1px solid #ddd;
-		}
-		.brand {
-			display: flex;
-			align-items: center;
-			gap: 10px;
-			margin: 0;
-			font-size: 1.2rem;
-			font-weight: 700;
-		}
-		.brand-logo {
-			width: 40px;
-			height: 40px;
-			flex: none;
-			border: 1px solid #ccc;
-		}
 
-		nav {
-			display: flex;
-			align-items: center;
-			justify-content: space-evenly;
-			gap: 12px;
-            margin-top: 12px;
-			padding: 10px 12px;
-			border: 1px solid #d5dce5;
-			border-radius: 10px;
-			background: #f3f6fa;
-		}
-		nav a {
-			flex: 1;
-			padding: 9px 12px;
-			border-radius: 6px;
-			color: #263b53;
-			font-weight: 700;
-			text-align: center;
-			text-decoration: none;
-			transition: background-color .2s ease, color .2s ease;
-		}
-		nav a:hover, nav a:focus-visible {
-			background: #263b53;
-			color: #fff;
-		}
-		main { padding: 24px 0 36px; }
-		.breadcrumbs { color: #666; font-size: .9rem; }
-		.recipe-heading {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: end;
-			justify-content: space-between;
-			gap: 1rem;
-			margin-bottom: 12px;
-		}
-		h1 {
-			margin: 6px 0;
-			font-size: clamp(2rem, 5vw, 2.5rem);
-		}
-		.actions {
-			display: flex;
-			gap: 8px;
-		}
-		button {
-			padding: 8px 12px;
-			border: 1px solid #777;
-			background: #fff;
-			font: inherit;
-			cursor: pointer;
-		}
-		.summary {
-			max-width: 720px;
-			margin: 0 0 20px;
-			line-height: 1.5;
-		}
-		.recipe-layout {
-			display: grid;
-			grid-template-columns: minmax(0, 1.5fr) minmax(250px, 1fr);
-			gap: 20px;
-		}
-		.panel {
-			padding: 16px;
-			border: 1px solid #ccc;
-			background: #fafafa;
-		}
-		.photo-placeholder {
-			display: block;
-			width: 100%;
-			min-height: 220px;
-			border: 1px dashed #999;
-			background: #f3f3f3;
-			color: #555;
-			overflow: hidden;
-		}
-		.recipe-photo {
-			display: block;
-			width: min(100%, 420px);
-			height: auto;
-			min-height: 0;
-			margin: 0 auto;
-			object-fit: cover;
-			object-position: center;
-		}
-		.meta {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 10px;
-			margin-top: 16px;
-		}
-		.meta div {
-			padding: 10px;
-			border: 1px solid #d7d7d7;
-			text-align: center;
-			background: #fff;
-		}
-		.meta strong, .meta span { display: block; }
-		h2 { margin-top: 0; }
-		.ingredients li, .steps li { padding: 4px 0; line-height: 1.4; }
-		.ingredients input { margin-right: 8px; }
-		.steps { padding-left: 20px; }
-		.notes {
-			min-height: 110px;
-			border-style: dashed;
-			color: #555;
-		}
-		@media (max-width: 720px) {
-			.recipe-layout { grid-template-columns: 1fr; }
-			nav { flex-wrap: wrap; }
-		}
-/* footer */
-.foot {
-color: black;
-}
-.foot h3 {
-color: white;		
-}
-/* quick menu */
+    body {
+        margin: 0;
+        color: #222;
+    }
 
+    a {
+        color: inherit;
+    }
 
+    .page {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 16px;
+    }
 
+    header {
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 18px 0;
+        border-bottom: 1px solid #ddd;
+    }
 
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .brand-logo {
+        width: 40px;
+        height: 40px;
+        flex: none;
+        border: 1px solid #ccc;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 12px;
+        margin-top: 12px;
+        padding: 10px 12px;
+        border: 1px solid #d5dce5;
+        border-radius: 10px;
+        background: #f3f6fa;
+    }
+
+        nav a {
+            flex: 1;
+            padding: 9px 12px;
+            border-radius: 6px;
+            color: #263b53;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color .2s ease, color .2s ease;
+        }
+
+            nav a:hover, nav a:focus-visible {
+                background: #263b53;
+                color: #fff;
+            }
+
+    main {
+        padding: 24px 0 36px;
+    }
+
+    .breadcrumbs {
+        color: #666;
+        font-size: .9rem;
+    }
+
+    .recipe-heading {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: end;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 12px;
+    }
+
+    h1 {
+        margin: 6px 0;
+        font-size: clamp(2rem, 5vw, 2.5rem);
+    }
+
+    .actions {
+        display: flex;
+        gap: 8px;
+    }
+
+    button {
+        padding: 8px 12px;
+        border: 1px solid #777;
+        background: #fff;
+        font: inherit;
+        cursor: pointer;
+    }
+
+    .summary {
+        max-width: 720px;
+        margin: 0 0 20px;
+        line-height: 1.5;
+    }
+
+    .recipe-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.5fr) minmax(250px, 1fr);
+        gap: 20px;
+    }
+
+    .panel {
+        padding: 16px;
+        border: 1px solid #ccc;
+        background: #fafafa;
+    }
+
+    .photo-placeholder {
+        display: block;
+        width: 100%;
+        min-height: 220px;
+        border: 1px dashed #999;
+        background: #f3f3f3;
+        color: #555;
+        overflow: hidden;
+    }
+
+    .recipe-photo {
+        display: block;
+        width: min(100%, 420px);
+        height: auto;
+        min-height: 0;
+        margin: 0 auto;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .meta {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 16px;
+    }
+
+        .meta div {
+            padding: 10px;
+            border: 1px solid #d7d7d7;
+            text-align: center;
+            background: #fff;
+        }
+
+        .meta strong, .meta span {
+            display: block;
+        }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    .ingredients li, .steps li {
+        padding: 4px 0;
+        line-height: 1.4;
+    }
+
+    .ingredients input {
+        margin-right: 8px;
+    }
+
+    .steps {
+        padding-left: 20px;
+    }
+
+    .notes {
+        min-height: 110px;
+        border-style: dashed;
+        color: #555;
+    }
+
+    @media (max-width: 720px) {
+        .recipe-layout {
+            grid-template-columns: 1fr;
+        }
+
+        nav {
+            flex-wrap: wrap;
+        }
+    }
+
+    .foot a {
+        color: black;
+    }
 </style>
