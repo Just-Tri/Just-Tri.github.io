@@ -5,9 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Recipe Book | Recipe Details</title>
-    <link rel="stylesheet" href="../default_setting.css" />
+    <link rel="stylesheet" href="../Tri Vu/default_setting.css" />
     <link rel="stylesheet" href="../Tri Vu/TV_HomeButton.css" />
-
+</head>
 <body>
  	<header>
         <!-- Home Page button start -->
@@ -21,6 +21,16 @@
         </div>
         <!-- Home Page button end -->
 		</header>
+
+<!-- quick recipe menu
+<center>
+<nav class="qkmenu">
+<a href="JC_Page2.html"> Beef and Vegetable Soup </a>
+&nbsp;&nbsp;
+<a href="JC_Page3.html"> Loaded Baked Potato Soup </a>
+</center>
+</nav>
+ end quick recipe menu -->
 
 		<nav aria-label="Main navigation">
 			<a href="#recipe">Recipes</a>
@@ -47,7 +57,7 @@
 				<section class="panel" aria-label="Recipe photo and details">
 					<img
 						class="photo-placeholder recipe-photo"
-						src=218562-Super-Easy-Chicken-Dumplings-DDMFS-2x1-0649-0161b5d85cde43ebbbd8654b96edddf9.jpg
+						src="218562-Super-Easy-Chicken-Dumplings-DDMFS-2x1-0649-0161b5d85cde43ebbbd8654b96edddf9.jpg"
 						alt="Chicken and dumplings dish"
 						aria-label="Recipe photo"
 					>
@@ -101,18 +111,28 @@
 				</section>
 			</div>
 		</main>
+<!-- quick recipe menu
+<center>
+<nav class="qkmenu">
+<a href="JC_Page2.html"> Beef and Vegetable Soup </a>
+&nbsp;&nbsp;
+<a href="JC_Page3.html"> Loaded Baked Potato Soup </a>
+</center>
+</nav>
+<br>
+ end quick recipe menu -->
+
 		<footer> <!-- TV Recipe Book &nbsp;·&nbsp; Recipe page wireframe -->
-	<div class="foot">
-		<br>
-		<h3> Contact Us </h3>
-		<p><a href="mailto:bigemail@gmail.com"> Email us here </a></p>
-		<p> Call us: (987)-654-3210 </p>
-		<p> Address: S.R.Collins Engineering Building <br> D.W. Martin Street, Prairie View, TX 77445 </p>
-		<a href="#top"> Back to Top</a> &nbsp;&nbsp;
-		<a href="index.html"> Back to Home </a>
-	</div>
+			<div class="foot">
+				<br>
+				<h3> Contact Us </h3>
+				<p><a href="mailto:bigemail@gmail.com"> Email us here </a></p>
+				<p> Call us: (987)-654-3210 </p>
+				<p> Address: S.R.Collins Engineering Building <br> D.W. Martin Street, Prairie View, TX 77445 </p>
+				<a href="#top"> Back to Top</a> &nbsp;&nbsp;
+				<a href="index.html"> Back to Home </a>
+			</div>
 		</footer>
-	</div>
 	<script>
 		const servingCount = document.getElementById('serving-count');
 		const ingredientAmounts = document.querySelectorAll('[data-amount]');
@@ -289,10 +309,16 @@
 			.recipe-layout { grid-template-columns: 1fr; }
 			nav { flex-wrap: wrap; }
 		}
-	/* quick footer fix */
-		.foot {
-			color: black;
-		}
-		.foot h3 {
-			color: white;
-		}
+/* footer */
+.foot {
+color: black;
+}
+.foot h3 {
+color: white;		
+}
+/* quick menu */
+
+
+
+
+</style>
