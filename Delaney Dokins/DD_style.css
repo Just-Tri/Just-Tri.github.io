@@ -1,0 +1,91 @@
+/* Name: Delaney Dokins */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f1e7;
+}
+
+header {
+    text-align: center;
+    background-color: #d9a066;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    text-align: center;
+    background-color: #4a2c2a;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+}
+
+main h2 {
+    text-align: center;
+}
+
+main img {
+    display: block;
+    width: 400px;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+h3 {
+    border-bottom: 2px solid #d9a066;
+    padding-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #4a2c2a;
+    color: white;
+}
+.foot footer {
+    margin: auto;
+    top: auto;
+    height: auto;
+}
+
+.foot h3 {
+    text-decoration: overline black 2px;
+    color: white;
+    font-weight: bold;
+}
+
+.foot {
+    text-align: center;
+    background-color: #f54927;
+}
+
+.foot a {
+    color: black;
+}
+
+#top {
+    text-align: left;
+}
+
+.foot button {
+    background: transparent;
+    box-shadow: none;
+    border: 0px;
+    font-size: 15px;
+    text-align: right;
+}
