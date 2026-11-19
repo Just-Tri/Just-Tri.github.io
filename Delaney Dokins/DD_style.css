@@ -1,9 +1,7 @@
 /* Name: Delaney Dokins */
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f8f1e7;
 }
 
 header {
@@ -51,6 +49,7 @@ h3 {
     padding-bottom: 5px;
 }
 
+/* comment out footer style
 footer {
     text-align: center;
     padding: 15px;
@@ -89,3 +88,4 @@ footer {
     font-size: 15px;
     text-align: right;
 }
+comment out footer style */
