@@ -44,48 +44,9 @@ main img {
     margin: 20px auto;
 }
 
-h3 {
+main h3 {
     border-bottom: 2px solid #d9a066;
     padding-bottom: 5px;
 }
 
-/* comment out footer style
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #4a2c2a;
-    color: white;
-}
-.foot footer {
-    margin: auto;
-    top: auto;
-    height: auto;
-}
 
-.foot h3 {
-    text-decoration: overline black 2px;
-    color: white;
-    font-weight: bold;
-}
-
-.foot {
-    text-align: center;
-    background-color: #f54927;
-}
-
-.foot a {
-    color: black;
-}
-
-#top {
-    text-align: left;
-}
-
-.foot button {
-    background: transparent;
-    box-shadow: none;
-    border: 0px;
-    font-size: 15px;
-    text-align: right;
-}
-comment out footer style */
