@@ -1,16 +1,23 @@
 /* Tri Vu - Self-Contained Logo & Navigation Script */
 (() => {
-    // 1. Load TV_HomeButton.css automatically if not already linked
-    const cssHref = "../Tri Vu/TV_HomeButton.css";
-    const alreadyLinked = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
-        .some(link => link.getAttribute("href") === cssHref);
+    // 1. Load required stylesheets automatically if not already linked
+    const requiredStyles = [
+        "../header_footer.css",
+        "../default_setting.css",
+        "../Tri Vu/TV_HomeButton.css"
+    ];
 
-    if (!alreadyLinked) {
-        const styleLink = document.createElement("link");
-        styleLink.rel = "stylesheet";
-        styleLink.href = cssHref;
-        document.head.appendChild(styleLink);
-    }
+    requiredStyles.forEach(cssHref => {
+        const alreadyLinked = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+            .some(link => link.getAttribute("href") === cssHref);
+
+        if (!alreadyLinked) {
+            const styleLink = document.createElement("link");
+            styleLink.rel = "stylesheet";
+            styleLink.href = cssHref;
+            document.head.appendChild(styleLink);
+        }
+    });
 
     // 2. Build and insert the header at the top of the page
     const mountHeader = () => {
