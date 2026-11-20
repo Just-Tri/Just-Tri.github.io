@@ -72,6 +72,8 @@
 
         #tv-header .tv-nav .nav-menu {
             margin: 0 !important;
+            padding: 0 !important;
+            list-style: none !important;
         }
 
         #tv-header:has(.logo-link:hover) .tv-nav,
@@ -80,10 +82,32 @@
             display: block !important;
         }
 
-    /* Prevent teammates' global list/link pseudo-elements (like "||") from leaking into the nav */
-    #tv-header li::before,
-    #tv-header li::after,
-    #tv-header a::before,
-    #tv-header a::after {
-        content: none !important;
+    /* Remove list bullets and markers */
+    #tv-header ul,
+    #tv-header ol,
+    #tv-header li {
+        list-style: none !important;
+        list-style-type: none !important;
     }
+
+        #tv-header li::marker {
+            content: none !important;
+            display: none !important;
+        }
+
+        /* Consistent text size across all list items inside #tv-header */
+        #tv-header li,
+        #tv-header li a,
+        #tv-header li span,
+        #tv-header li button {
+            font-size: 20px !important;
+            line-height: 1.4 !important;
+        }
+
+            /* Prevent teammates' global list/link pseudo-elements (like "||") from leaking into the nav */
+            #tv-header li::before,
+            #tv-header li::after,
+            #tv-header a::before,
+            #tv-header a::after {
+                content: none !important;
+            }
