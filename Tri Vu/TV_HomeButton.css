@@ -1,4 +1,12 @@
 /* Tri Vu */
+header {
+    text-align: center;
+}
+
+.homepage-button-container {
+    display: inline-block;
+}
+
 .logo-link {
     display: inline-block;
 }
@@ -19,4 +27,15 @@
 
 .logo-link:hover .hover-logo {
     display: inline;
+}
+
+/* Hide navigation bar until the logo link or nav itself is hovered */
+header nav {
+    display: none;
+    padding-top: 10px;
+}
+
+header:has(.logo-link:hover) nav,
+header nav:hover {
+    display: block;
 }
