@@ -1,41 +1,89 @@
 /* Tri Vu */
 #tv-header {
-    text-align: center;
+    position: relative !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
     #tv-header .homepage-button-container {
-        display: inline-block;
+        display: inline-block !important;
+        vertical-align: top !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        line-height: 0 !important;
+        background: transparent !important;
+        background-color: transparent !important;
+        border: none !important;
     }
 
     #tv-header .logo-link {
-        display: inline-block;
+        display: inline-block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        line-height: 0 !important;
+        background: transparent !important;
+        border: none !important;
     }
 
     #tv-header .logo-img {
-        height: 180px;
-        width: auto;
-        border: none;
+        display: block !important;
+        height: 180px !important;
+        width: auto !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
     }
 
     #tv-header .logo-link .hover-logo {
-        display: none;
+        display: none !important;
     }
 
     #tv-header .logo-link:hover .default-logo {
-        display: none;
+        display: none !important;
     }
 
     #tv-header .logo-link:hover .hover-logo {
-        display: inline;
+        display: block !important;
     }
 
-    /* Hide ONLY this navigation bar until the logo link or this nav itself is hovered */
+    /* Override any teammate nav rules so ONLY hover opens it */
     #tv-header .tv-nav {
-        display: none;
-        padding-top: 10px;
+        display: none !important;
+        position: relative !important;
+        z-index: 9999 !important;
+        width: fit-content !important;
+        margin: -4px auto 0 auto !important;
+        padding: 14px 0 0 0 !important;
+        overflow: visible !important;
+        background: transparent !important;
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
     }
+
+        #tv-header .tv-nav .nav-menu {
+            margin: 0 !important;
+        }
 
         #tv-header:has(.logo-link:hover) .tv-nav,
+        #tv-header:focus-within .tv-nav,
         #tv-header .tv-nav:hover {
-            display: block;
+            display: block !important;
         }
+
+    /* Prevent teammates' global list/link pseudo-elements (like "||") from leaking into the nav */
+    #tv-header li::before,
+    #tv-header li::after,
+    #tv-header a::before,
+    #tv-header a::after {
+        content: none !important;
+    }

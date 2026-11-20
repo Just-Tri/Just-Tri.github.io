@@ -1,26 +1,35 @@
 /* Tri Vu - Self-Contained Logo & Navigation Script */
 (() => {
-    // 1. Load required stylesheets automatically if not already linked
+    // 1. Load required stylesheets automatically and move them to the end of <head>
+    // so they take priority over teammates' page-specific CSS
     const requiredStyles = [
         "../header_footer.css",
         "../default_setting.css",
-        "../Tri Vu/TV_HomeButton.css",
+        "../Tri Vu/TV_HomeButton.css"
     ];
 
-    requiredStyles.forEach(cssHref => {
-        const alreadyLinked = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
-            .some(link => link.getAttribute("href") === cssHref);
+    const ensureStylesPriority = () => {
+        requiredStyles.forEach(cssHref => {
+            const existing = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+                .find(link => link.getAttribute("href") === cssHref);
 
-        if (!alreadyLinked) {
-            const styleLink = document.createElement("link");
-            styleLink.rel = "stylesheet";
-            styleLink.href = cssHref;
-            document.head.appendChild(styleLink);
-        }
-    });
+            if (existing) {
+                document.head.appendChild(existing);
+            } else {
+                const styleLink = document.createElement("link");
+                styleLink.rel = "stylesheet";
+                styleLink.href = cssHref;
+                document.head.appendChild(styleLink);
+            }
+        });
+    };
+
+    ensureStylesPriority();
 
     // 2. Build and insert the header at the top of the page
     const mountHeader = () => {
+        ensureStylesPriority();
+
         if (document.getElementById("tv-auto-header")) return;
 
         const wrapper = document.createElement("div");
@@ -29,12 +38,10 @@
             <header id="tv-header">
                 <!-- Home Page button start -->
                 <div class="homepage-button-container">
-                    <center>
-                        <a href="../index.html" class="logo-link">
-                            <img src="../Tri Vu/Images/book_logo.png" alt="Book Logo" class="logo-img default-logo">
-                            <img src="../Tri Vu/Images/book_open_golden_home_page.png" alt="Home Page Book" class="logo-img hover-logo">
-                        </a>
-                    </center>
+                    <a href="../index.html" class="logo-link">
+                        <img src="../Tri Vu/Images/book_logo.png" alt="Book Logo" class="logo-img default-logo">
+                        <img src="../Tri Vu/Images/book_open_golden_home_page.png" alt="Home Page Book" class="logo-img hover-logo">
+                    </a>
                 </div>
                 <!-- Home Page button end -->
 
