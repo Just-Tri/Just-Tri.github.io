@@ -4,7 +4,7 @@
     const requiredStyles = [
         "../header_footer.css",
         "../default_setting.css",
-        "../Tri Vu/TV_HomeButton.css"
+        "../Tri Vu/TV_HomeButton.css",
     ];
 
     requiredStyles.forEach(cssHref => {
