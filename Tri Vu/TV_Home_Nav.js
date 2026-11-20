@@ -19,20 +19,20 @@
         const wrapper = document.createElement("div");
         wrapper.id = "tv-auto-header";
         wrapper.innerHTML = `
-            <header>
+            <header id="tv-header">
                 <!-- Home Page button start -->
                 <div class="homepage-button-container">
                     <center>
                         <a href="../index.html" class="logo-link">
-                            <img src="Images/book_logo.png" alt="Book Logo" class="logo-img default-logo">
-                            <img src="Images/book_open_golden_home_page.png" alt="Home Page Book" class="logo-img hover-logo">
+                            <img src="../Tri Vu/Images/book_logo.png" alt="Book Logo" class="logo-img default-logo">
+                            <img src="../Tri Vu/Images/book_open_golden_home_page.png" alt="Home Page Book" class="logo-img hover-logo">
                         </a>
                     </center>
                 </div>
                 <!-- Home Page button end -->
 
                 <!--Navigation Start-->
-                <nav>
+                <nav class="tv-nav">
                     <ul class="nav-menu">
                         <li class="nav-item">
                             Breakfast

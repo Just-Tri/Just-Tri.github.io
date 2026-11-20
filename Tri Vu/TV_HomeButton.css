@@ -1,41 +1,41 @@
 /* Tri Vu */
-header {
+#tv-header {
     text-align: center;
 }
 
-.homepage-button-container {
-    display: inline-block;
-}
+    #tv-header .homepage-button-container {
+        display: inline-block;
+    }
 
-.logo-link {
-    display: inline-block;
-}
+    #tv-header .logo-link {
+        display: inline-block;
+    }
 
-.logo-img {
-    height: 180px;
-    width: auto;
-    border: none;
-}
+    #tv-header .logo-img {
+        height: 180px;
+        width: auto;
+        border: none;
+    }
 
-.logo-link .hover-logo {
-    display: none;
-}
+    #tv-header .logo-link .hover-logo {
+        display: none;
+    }
 
-.logo-link:hover .default-logo {
-    display: none;
-}
+    #tv-header .logo-link:hover .default-logo {
+        display: none;
+    }
 
-.logo-link:hover .hover-logo {
-    display: inline;
-}
+    #tv-header .logo-link:hover .hover-logo {
+        display: inline;
+    }
 
-/* Hide navigation bar until the logo link or nav itself is hovered */
-header nav {
-    display: none;
-    padding-top: 10px;
-}
+    /* Hide ONLY this navigation bar until the logo link or this nav itself is hovered */
+    #tv-header .tv-nav {
+        display: none;
+        padding-top: 10px;
+    }
 
-header:has(.logo-link:hover) nav,
-header nav:hover {
-    display: block;
-}
+        #tv-header:has(.logo-link:hover) .tv-nav,
+        #tv-header .tv-nav:hover {
+            display: block;
+        }
