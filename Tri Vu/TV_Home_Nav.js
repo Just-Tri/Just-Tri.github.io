@@ -1,7 +1,7 @@
 /* Tri Vu - Self-Contained Logo & Navigation Script */
 (() => {
     // 1. Load TV_HomeButton.css automatically if not already linked
-    const cssHref = "TV_HomeButton.css";
+    const cssHref = "../Tri Vu/TV_HomeButton.css";
     const alreadyLinked = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
         .some(link => link.getAttribute("href") === cssHref);
 
@@ -20,18 +20,72 @@
         wrapper.id = "tv-auto-header";
         wrapper.innerHTML = `
             <header>
+                <!-- Home Page button start -->
                 <div class="homepage-button-container">
-                    <a href="index.html" class="logo-link">
-                        <img src="closed-book.png" alt="Book Logo" class="logo-img default-logo">
-                        <img src="open-book.png" alt="Open Book Logo" class="logo-img hover-logo">
-                    </a>
+                    <center>
+                        <a href="../index.html" class="logo-link">
+                            <img src="Images/book_logo.png" alt="Book Logo" class="logo-img default-logo">
+                            <img src="Images/book_open_golden_home_page.png" alt="Home Page Book" class="logo-img hover-logo">
+                        </a>
+                    </center>
                 </div>
+                <!-- Home Page button end -->
 
+                <!--Navigation Start-->
                 <nav>
-                    <a href="index.html">Home</a>
-                    <a href="recipes.html">Recipes</a>
-                    <a href="about.html">About</a>
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            Breakfast
+                            <ul class="nav-dropdown">
+                                <li class="nav-dropdown-item"><a href="../Daphnie Jones/DJ_Page1.html" class="nav-link">Quesadilla</a></li>
+                                <li class="nav-dropdown-item"><a href="../Daphnie Jones/DJ_Page2.html" class="nav-link">French Toast</a></li>
+                                <li class="nav-dropdown-item"><a href="../Daphnie Jones/DJ_Page3.html" class="nav-link">Crepes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            Soup
+                            <ul class="nav-dropdown">
+                                <li class="nav-dropdown-item"><a href="../Joshua Cruse/JC_Page1.html" class="nav-link">Chicken & Dumplings Soup</a></li>
+                                <li class="nav-dropdown-item"><a href="../Joshua Cruse/JC_Page2.html" class="nav-link">Beef & Vegetable Soup</a></li>
+                                <li class="nav-dropdown-item"><a href="../Joshua Cruse/JC_Page3.html" class="nav-link">Loaded Baked Potato Soup</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            Sandwich
+                            <ul class="nav-dropdown">
+                                <li class="nav-dropdown-item"><a href="../Jaylin Jordan/JJ_Page1.html" class="nav-link">Garlic-Herb Grilled Pork Chop Sandwich</a></li>
+                                <li class="nav-dropdown-item"><a href="../Jaylin Jordan/JJ_Page2.html" class="nav-link">Cajun-Spiced Crispy Tilapia Sandwich</a></li>
+                                <li class="nav-dropdown-item"><a href="../Jaylin Jordan/JJ_Page3.html" class="nav-link">Air Fryer Sirloin Steak Sandwiches & Bacon Jam</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            Dessert
+                            <ul class="nav-dropdown">
+                                <li class="nav-dropdown-item"><a href="../Michelle Wilborn/MW_Page1.html" class="nav-link">Peach Cobbler</a></li>
+                                <li class="nav-dropdown-item"><a href="../Michelle Wilborn/MW_Page2.html" class="nav-link">S'mores Cookies</a></li>
+                                <li class="nav-dropdown-item"><a href="../Michelle Wilborn/MW_Page3.html" class="nav-link">Biscoff Cheesecake</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            Chicken Alfredo
+                            <ul class="nav-dropdown">
+                                <li class="nav-dropdown-item"><a href="../Delaney Dokins/DD_Page1.html" class="nav-link">Classic Chicken Alfredo</a></li>
+                                <li class="nav-dropdown-item"><a href="../Delaney Dokins/DD_Page2.html" class="nav-link">Blackened Chicken Alfredo</a></li>
+                                <li class="nav-dropdown-item"><a href="../Delaney Dokins/DD_Page3.html" class="nav-link">Cajun Chicken Alfredo</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            Barbeque
+                            <ul class="nav-dropdown">
+                                <li class="nav-dropdown-item"><a href="../Deja Ware/DW_Page1.html" class="nav-link">BBQ Portal</a></li>
+                                <li class="nav-dropdown-item"><a href="../Deja Ware/DW_Page2.html#brisket" class="nav-link">Smoked Brisket</a></li>
+                                <li class="nav-dropdown-item"><a href="../Deja Ware/DW_Page2.html#chicken" class="nav-link">Honey BBQ Chicken</a></li>
+                                <li class="nav-dropdown-item"><a href="../Deja Ware/DW_Page2.html#ribs" class="nav-link">BBQ Ribs</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </nav>
+                <!--Navigation End-->
             </header>
         `;
 
