@@ -6,6 +6,39 @@
     <link rel="stylesheet" href="header_footer.css">
     <link rel="stylesheet" href="default_setting.css">
     <link rel="stylesheet" href="Tri Vu/TV_HomeButton.css">
+
+    <style>
+        .book-showcase-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #recipe_book_wrapper {
+            position: relative;
+            z-index: 2;
+        }
+
+        .side-character {
+            height: 380px;
+            width: auto;
+            border: none !important;
+            object-fit: contain;
+            margin: 0 -170px;
+            pointer-events: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 1150px) {
+            .side-character {
+                display: none !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <header id="tv-header">
@@ -78,60 +111,63 @@
     </header>
 
     <!-- Recipe Book start (Visual) -->
-    <div id="recipe_book_wrapper">
-        <div id="recipe_book_container">
-            <img src="Tri Vu/Images/book_open.png" alt="Open Book" id="recipe_book_bg">
+    <div class="book-showcase-row">
+        <img id="chef_default_img" src="Tri Vu/Images/chef.png" alt="Chef" class="chef side-character">
+        <img id="chef_approve_img" src="Tri Vu/Images/chef_approve.png" alt="Chef Approve" class="chef side-character" style="display: none;">
 
-            <div id="recipe_book_left_page">
-                <img id="recipe_book_fruit_image" src="" alt="Recipe Image">
-            </div>
+        <div id="recipe_book_wrapper">
+            <div id="recipe_book_container">
+                <img src="Tri Vu/Images/book_open.png" alt="Open Book" id="recipe_book_bg">
 
-            <!--Description and Stats-->
-            <div id="recipe_book_right_page">
-                <h2 id="recipe_book_fruit_title"></h2>
-                <p id="recipe_book_fruit_description"></p>
-
-                <div id="recipe_book_metadata">
-                    <div class="recipe_book_meta_item">
-                        <span>Difficulty:</span>
-                        <span id="recipe_book_difficulty"></span>
-                    </div>
-                    <div class="recipe_book_meta_item">
-                        <span>Spiciness:</span>
-                        <span id="recipe_book_spiciness"></span>
-                    </div>
-                    <div class="recipe_book_meta_item">
-                        <span>Season:</span>
-                        <span id="recipe_book_season"></span>
-                    </div>
+                <div id="recipe_book_left_page">
+                    <img id="recipe_book_fruit_image" src="" alt="Recipe Image">
                 </div>
 
-                <a id="recipe_book_link" href="#" target="_blank"><< View Recipe >></a>
-            </div>
+                <!--Description and Stats-->
+                <div id="recipe_book_right_page">
+                    <h2 id="recipe_book_fruit_title"></h2>
+                    <p id="recipe_book_fruit_description"></p>
 
-            <button id="recipe_book_prev_btn">❮</button>
-            <button id="recipe_book_next_btn">❯</button>
+                    <div id="recipe_book_metadata">
+                        <div class="recipe_book_meta_item">
+                            <span>Difficulty:</span>
+                            <span id="recipe_book_difficulty"></span>
+                        </div>
+                        <div class="recipe_book_meta_item">
+                            <span>Spiciness:</span>
+                            <span id="recipe_book_spiciness"></span>
+                        </div>
+                        <div class="recipe_book_meta_item">
+                            <span>Season:</span>
+                            <span id="recipe_book_season"></span>
+                        </div>
+                    </div>
+
+                    <a id="recipe_book_link" href="#"><< View Recipe >></a>
+                </div>
+
+                <button id="recipe_book_prev_btn">❮</button>
+                <button id="recipe_book_next_btn">❯</button>
+            </div>
         </div>
+
+        <img id="home_cook_default_img" src="Tri Vu/Images/home_cook.png" alt="Home Cook" class="Home cook side-character">
+        <img id="home_cook_approve_img" src="Tri Vu/Images/home_cook_approve.png" alt="Home Cook Approve" class="Home cook side-character" style="display: none;">
     </div>
     <!-- Recipe Book end (Visual) -->
-    <!-- image and quote -->
-    <br>
-    <center>
-        <img class="testing" src="Maya Collins/vsimagefinal.png" alt="Gordon Ramsay vs Home Cook">
-    </center>
-     <br><br>    
-                    <!-- footer -->
-<footer>
-    <div class="foot">
-        <br>
-        <h3> Contact Us </h3>
-        <p><a href="mailto:bigemail@gmail.com"> Email us here </a></p>
-        <p> Call us: (987)-654-3210 </p>
-        <p> Address: S.R.Collins Engineering Building <br> D.W. Martin Street, Prairie View, TX 77445 </p>
-        <a href="#top"> Back to Top</a> &nbsp;&nbsp;
-        <a href="../index.html"> Back to Home </a>
-    </div>
-</footer>
+
+    <!-- footer -->
+    <footer>
+        <div class="foot">
+            <br>
+            <h3> Contact Us </h3>
+            <p><a href="mailto:bigemail@gmail.com"> Email us here </a></p>
+            <p> Call us: (987)-654-3210 </p>
+            <p> Address: S.R.Collins Engineering Building <br> D.W. Martin Street, Prairie View, TX 77445 </p>
+            <a href="#top"> Back to Top</a> &nbsp;&nbsp;
+            <a href="../index.html"> Back to Home </a>
+        </div>
+    </footer>
 </body>
 </html>
 
@@ -146,18 +182,18 @@
 
     class RecipeEntry {
         constructor(image, link, name, description, difficulty, spiciness, season) {
-            this.image = image;             // String
-            this.link = link;               // String
-            this.name = name;               // String
-            this.description = description; // String
-            this.difficulty = difficulty;   // Integer
-            this.spiciness = spiciness;     // Integer
-            this.season = season;           // Enum
+            this.image = image;
+            this.link = link;
+            this.name = name;
+            this.description = description;
+            this.difficulty = difficulty;
+            this.spiciness = spiciness;
+            this.season = season;
         }
     }
 
     const recipe_book_fruit_data = [
-        // Daphnie Jones /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Daphnie Jones
+        // Daphnie Jones
         new RecipeEntry(
             "Daphnie Jones/images/quesadilla.jpg",
             "Daphnie Jones/DJ_Page1.html",
@@ -186,7 +222,7 @@
             Season.SUMMER
         ),
 
-        // Joshua Cruse /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Joshua Cruse
+        // Joshua Cruse
         new RecipeEntry(
             "Joshua Cruse/218562-Super-Easy-Chicken-Dumplings-DDMFS-2x1-0649-0161b5d85cde43ebbbd8654b96edddf9.jpg",
             "Joshua Cruse/JC_Page1.html",
@@ -215,7 +251,7 @@
             Season.WINTER
         ),
 
-        // Jaylin Jordan /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Jaylin Jordan
+        // Jaylin Jordan
         new RecipeEntry(
             "Jaylin Jordan/herbed-pork-chop-sandwichesc-1.webp",
             "Jaylin Jordan/JJ_Page1.html",
@@ -244,7 +280,7 @@
             Season.SPRING
         ),
 
-        // Michelle Wilborn /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Michelle Wilborn
+        // Michelle Wilborn
         new RecipeEntry(
             "Michelle Wilborn/PC.jpg",
             "Michelle Wilborn/MW_Page1.html",
@@ -272,7 +308,8 @@
             0,
             Season.WINTER
         ),
-        // Delaney Dokins /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Delaney Dokins
+
+        // Delaney Dokins
         new RecipeEntry(
             "Delaney Dokins/chickenalfredo.jpg",
             "Delaney Dokins/DD_Page1.html",
@@ -301,7 +338,7 @@
             Season.WINTER
         ),
 
-        // Deja Ware /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Deja Ware
+        // Deja Ware
         new RecipeEntry(
             "Deja Ware/images/brisket.jpg",
             "Deja Ware/DW_Page2.html#brisket",
@@ -328,50 +365,11 @@
             3,
             1,
             Season.SUMMER
-        ),
-
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Feed Data
-        /*
-        new RecipeEntry(
-            "Tri Vu/Images/apple.jpg",
-            "Tri Vu/apple.html",
-            "apple",
-            "Apples are popular citrus-free fruits containing high amounts of fiber and vitamin C. They grow on small deciduous trees and come in a wide variety of bright red, green, and yellow cultivars.",
-            2,
-            1,
-            Season.SPRING
-        ),
-        new RecipeEntry(
-            "Tri Vu/Images/banana.jpg",
-            "Tri Vu/banana.html",
-            "banana",
-            "Bananas are elongated, edible fruits produced by several kinds of large herbaceous flowering plants. They are rich in potassium, carbohydrates, and provide a quick source of natural energy.",
-            1,
-            2,
-            Season.SUMMER
-        ),
-        new RecipeEntry(
-            "Tri Vu/Images/orange.jpg",
-            "Tri Vu/orange.html",
-            "orange",
-            "Oranges are a type of citrus fruit known for their sweet and tangy flavor profile. They are packed with essential vitamins, particularly vitamin C, and have a thick, pebbled outer rind.",
-            2,
-            3,
-            Season.AUTUMN
-        ),
-        new RecipeEntry(
-            "Tri Vu/Images/coconut.jpg",
-            "Tri Vu/coconut.html",
-            "coconut",
-            "Coconuts are the large, hard-shelled seeds of the coconut palm. Inside, they contain sweet refreshing coconut water and a thick white edible flesh rich in natural oils.",
-            4,
-            4,
-            Season.WINTER
         )
-        */
     ];
 </script>
 <!-- Recipe Book end (Data) -->
+
 <!-- Recipe Book start (Logic) -->
 <script>
     let recipe_book_current_index = 0;
@@ -385,6 +383,11 @@
     const recipe_book_prev_btn = document.getElementById("recipe_book_prev_btn");
     const recipe_book_next_btn = document.getElementById("recipe_book_next_btn");
 
+    const chef_default_img = document.getElementById("chef_default_img");
+    const chef_approve_img = document.getElementById("chef_approve_img");
+    const home_cook_default_img = document.getElementById("home_cook_default_img");
+    const home_cook_approve_img = document.getElementById("home_cook_approve_img");
+
     function generateStars(rating, color) {
         let stars = "";
         for (let i = 1; i <= 5; i++) {
@@ -397,6 +400,17 @@
         return stars;
     }
 
+    function update_character_poses(season) {
+        const isSummer = season === Season.SUMMER;
+        const isSpring = season === Season.SPRING;
+
+        chef_default_img.style.display = isSummer ? "none" : "inline-block";
+        chef_approve_img.style.display = isSummer ? "inline-block" : "none";
+
+        home_cook_default_img.style.display = isSpring ? "none" : "inline-block";
+        home_cook_approve_img.style.display = isSpring ? "inline-block" : "none";
+    }
+
     function recipe_book_update_content() {
         const currentRecipe = recipe_book_fruit_data[recipe_book_current_index];
         recipe_book_img_element.src = currentRecipe.image;
@@ -406,6 +420,7 @@
         recipe_book_spice_element.innerHTML = generateStars(currentRecipe.spiciness, "#8b0000");
         recipe_book_season_element.textContent = currentRecipe.season;
         recipe_book_link_element.href = currentRecipe.link;
+        update_character_poses(currentRecipe.season);
     }
 
     recipe_book_next_btn.addEventListener("click", () => {
