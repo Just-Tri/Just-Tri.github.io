@@ -64,3 +64,11 @@ display: none;
 .lglk:hover .opbk {
 display: inline;
 }
+
+/* home image */
+.testing {
+border: 3px solid black;
+border-radius: 10px;
+width: 50%;
+height: 65%;
+}
