@@ -38,6 +38,51 @@
                 display: none !important;
             }
         }
+
+        /* Homepage footer */
+        .homepage-footer .foot {
+            background-color: #cc3700;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 5px solid #292725;
+        }
+
+        .homepage-footer .foot h2,
+        .homepage-footer .foot h3 {
+            color: white;
+            margin: 10px 0;
+            text-decoration: none;
+        }
+
+        .homepage-footer .foot p {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+
+        .homepage-footer .foot a {
+            color: white;
+        }
+
+        /* Footer navigation links */
+        .homepage-footer .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .homepage-footer .footer-links a {
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 8px 16px;
+        }
+
+        .homepage-footer .footer-links a:hover {
+            background-color: #292725;
+        }
+
     </style>
 </head>
 <body>
@@ -154,16 +199,23 @@
     </div>
     <!-- Recipe Book end (Visual) -->
 
-    <!-- footer -->
-    <footer>
+    <!-- Footer -->
+    <footer class="homepage-footer">
         <div class="foot">
-            <br>
-            <h3> Contact Us </h3>
-            <p><a href="mailto:bigemail@gmail.com"> Email us here </a></p>
-            <p> Call us: (987)-654-3210 </p>
-            <p> Address: S.R.Collins Engineering Building <br> D.W. Martin Street, Prairie View, TX 77445 </p>
-            <a href="#top"> Back to Top</a> &nbsp;&nbsp;
-            <a href="../index.html"> Back to Home </a>
+            <h2>Cooking Something</h2>
+            <p>A recipe collection created by our Web Design group.</p>
+
+            <h3>Contact Us</h3>
+            <p><a href="mailto:bigemail@gmail.com">Email us here</a></p>
+            <p>Call us: (987)-654-3210</p>
+            <p>S.R. Collins Engineering Building<br>
+               D.W. Martin Street, Prairie View, TX 77445</p>
+
+            <!-- Links back to the page -->
+            <div class="footer-links">
+                <a href="#">Back to Top</a>
+                <a href="index.html">Home</a>
+            </div>
         </div>
     </footer>
 </body>
