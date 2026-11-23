@@ -1,130 +1,132 @@
-<!-- deja ware -->
+/* Deja Ware */
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BBQ Recipes</title>
 
     <style>
-
-        /* Main BBQ page colors */
-        body {
+        /* Match the group cookbook colors and fonts */
+        body.bbq-site {
             margin: 0;
+            background-color: #FAEBD7;
             color: #292725;
+            font-family: "Redaction", Georgia, serif;
+            line-height: 1.5;
         }
 
-        /* Header and navigation */
-        header {
+        /* Our BBQ banner below the group's navigation */
+        .bbq-hero {
             background-color: #292725;
             color: white;
-            padding: 30px;
             text-align: center;
+            padding: 30px 20px;
+            border-bottom: 4px solid #cc3700;
         }
 
-        nav {
-            margin-top: 20px;
+        .bbq-hero h1 {
+            font-family: "Archivo Black", Arial, sans-serif;
+            margin: 0 0 8px;
         }
 
-            nav a {
-                color: white;
-                text-decoration: none;
-                margin: 15px;
-            }
+        .bbq-hero p {
+            margin: 0;
+        }
 
-                /* Changes link color when hovered over */
-                nav a:hover {
-                    color: #c65d36;
-                }
+        /* Links between the main site and our BBQ pages */
+        .bbq-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 18px;
+        }
 
-        /* Keep everything centered */
-        main {
+        .bbq-links a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 2px solid #cc3700;
+            padding: 4px;
+        }
+
+        .bbq-links a:hover {
+            color: #ffb089;
+        }
+
+        /* Only change our BBQ content, not the group menu */
+        main.bbq-main {
             max-width: 1000px;
             margin: auto;
-            padding: 20px;
+            padding: 24px 20px;
         }
 
+        .bbq-main h2 {
+            font-family: "Archivo Black", Arial, sans-serif;
+            color: darkred;
+        }
+
+        .bbq-main h3 {
+            font-family: "Archivo Black", Arial, sans-serif;
+            color: #522a1e;
+        }
 
         /* White box for each recipe */
-        .recipe {
+        .bbq-main .recipe {
             background-color: white;
             padding: 25px;
             margin-bottom: 30px;
-            border: 1px solid #ddd;
+            border: 1px solid #d8c2ae;
         }
 
-            /* Keeps pictures from being too large */
-            .recipe img {
-                width: 350px;
-                max-width: 100%;
-                height: auto;
-            }
+        /* Keep each picture from being too big */
+        .bbq-main .recipe img {
+            width: 350px;
+            max-width: 100%;
+            height: auto;
+            border: none;
+        }
 
-        /* Space between ingredients and steps */
-        li {
+        .bbq-main li {
             margin-bottom: 8px;
         }
 
-        /* Orange links to go back */
-        .back {
-            color: #c65d36;
+        .bbq-main .back {
+            color: #a9320e;
         }
-
-        .foot {
-            color: black;
-        }
-        .foot h3 {
-            color: white;
-        }
-        
     </style>
 </head>
 
-<body id="top">
-    <!--Home Button + Navigation-->
+<body id="top" class="bbq-site">
+
+    <!-- Group's cookbook logo and dropdown navigation -->
     <script src="../Tri Vu/TV_Home_Nav.js"></script>
 
-    <!-- BBQ recipe page header -->
-    <header>
+    <!-- Our own BBQ section heading -->
+    <div class="bbq-hero">
         <h1>Our BBQ Recipes</h1>
         <p>Find your next cookout favorite!</p>
 
-        <!-- Links to the main site and my BBQ pages -->
-        <nav>
-            <a href="../index.html">Home</a>
+        <div class="bbq-links">
+            <a href="../index.html">Main Cookbook</a>
             <a href="./DW_Page1.html">BBQ Home</a>
-            <a href="./DW_Page2.html">BBQ Recipes</a>
-        </nav>
-    </header>
+            <a href="./DW_Page2.html">All BBQ Recipes</a>
+        </div>
+    </div>
 
-    <main>
-
-        <!-- Quick intro before the recipes -->
-        <p>
-            Here are three BBQ recipes to try at home.
-            Whether you have a smoker, a grill, or just
-            an oven, we have something for you.
-        </p>
+    <main class="bbq-main">
+        <p>Here are three BBQ recipes to try at home. Whether you have a smoker, a grill, or just an oven, we have something for you.</p>
 
         <!-- Smoked brisket recipe -->
-        <!-- The id lets page 1 link straight to this recipe -->
         <div class="recipe" id="brisket">
-
             <h2>Smoked Brisket</h2>
-
-            <img src="images/brisket.jpg"
-                 alt="Smoked Brisket">
-
-            <p>
-                Brisket takes time, but the smoky flavor
-                makes it worth the wait.
-            </p>
-
+            <img src="images/brisket.jpg" alt="Smoked Brisket">
+            <p>Brisket takes time, but the smoky flavor makes it worth the wait.</p>
             <p><b>Cooking Method:</b> Smoking</p>
             <p><b>Prep Time:</b> 15 minutes</p>
             <p><b>Cook Time:</b> About 6 to 8 hours</p>
 
             <h3>Ingredients</h3>
-
             <ul>
                 <li>3 to 4 lb beef brisket</li>
                 <li>2 tablespoons salt</li>
@@ -134,44 +136,27 @@
             </ul>
 
             <h3>Instructions</h3>
-
             <ol>
                 <li>Preheat the smoker to 225°F.</li>
                 <li>Mix the salt, pepper, and garlic powder.</li>
                 <li>Season the brisket on all sides.</li>
                 <li>Place the brisket in the smoker.</li>
-                <li>
-                    Smoke until the meat becomes tender,
-                    usually around 195°F to 205°F internally.
-                    Cooking time may vary.
-                </li>
+                <li>Smoke until the meat becomes tender, usually around 195°F to 205°F internally. Cooking time may vary.</li>
                 <li>Let the brisket rest before slicing.</li>
             </ol>
-
-            <!-- Takes the user back to the top -->
             <a class="back" href="#top">Back to Top</a>
-
         </div>
 
         <!-- Honey BBQ chicken recipe -->
         <div class="recipe" id="chicken">
-
             <h2>Honey BBQ Chicken</h2>
-
-            <img src="images/chicken.jpg"
-                 alt="Honey BBQ Chicken">
-
-            <p>
-                Sweet, smoky, and easy to make.
-                A good choice for a backyard cookout.
-            </p>
-
+            <img src="images/chicken.jpg" alt="Honey BBQ Chicken">
+            <p>Sweet, smoky, and easy to make. A good choice for a backyard cookout.</p>
             <p><b>Cooking Method:</b> Grilling</p>
             <p><b>Prep Time:</b> 10 minutes</p>
             <p><b>Cook Time:</b> About 15 minutes</p>
 
             <h3>Ingredients</h3>
-
             <ul>
                 <li>1 lb boneless chicken thighs</li>
                 <li>1/2 cup BBQ sauce</li>
@@ -181,51 +166,29 @@
             </ul>
 
             <h3>Instructions</h3>
-
             <ol>
                 <li>Preheat the grill to medium heat.</li>
-                <li>
-                    Season the chicken with salt,
-                    pepper, and garlic powder.
-                </li>
+                <li>Season the chicken with salt, pepper, and garlic powder.</li>
                 <li>Mix the BBQ sauce and honey in a bowl.</li>
                 <li>Place the chicken on the grill.</li>
                 <li>Cook for about 5 to 7 minutes per side.</li>
-                <li>
-                    Brush the honey BBQ sauce onto the
-                    chicken near the end of cooking.
-                </li>
-                <li>
-                    Keep cooking until the chicken
-                    reaches 165°F internally.
-                </li>
+                <li>Brush the honey BBQ sauce onto the chicken near the end of cooking.</li>
+                <li>Keep cooking until the chicken reaches 165°F internally.</li>
                 <li>Remove from the grill and serve.</li>
             </ol>
-
             <a class="back" href="#top">Back to Top</a>
-
         </div>
 
         <!-- BBQ ribs recipe -->
         <div class="recipe" id="ribs">
-
             <h2>BBQ Ribs</h2>
-
-            <img src="images/ribs.jpg"
-                 alt="BBQ Ribs">
-
-            <p>
-                BBQ ribs are a classic cookout favorite.
-                They can be baked in the oven and finished
-                with plenty of sauce.
-            </p>
-
+            <img src="images/ribs.jpg" alt="BBQ Ribs">
+            <p>BBQ ribs are a classic cookout favorite. They can be baked in the oven and finished with plenty of sauce.</p>
             <p><b>Cooking Method:</b> Oven BBQ</p>
             <p><b>Prep Time:</b> 15 minutes</p>
             <p><b>Cook Time:</b> About 2.5 to 3 hours</p>
 
             <h3>Ingredients</h3>
-
             <ul>
                 <li>1 rack of pork ribs</li>
                 <li>1 cup BBQ sauce</li>
@@ -235,56 +198,32 @@
             </ul>
 
             <h3>Instructions</h3>
-
             <ol>
                 <li>Preheat the oven to 300°F.</li>
-                <li>
-                    Season the ribs with garlic powder,
-                    paprika, salt, and pepper.
-                </li>
-                <li>
-                    Wrap the ribs in foil and place them
-                    on a baking sheet.
-                </li>
-                <li>
-                    Bake for about 2.5 to 3 hours
-                    until the ribs are tender and cooked through.
-                </li>
-                <li>
-                    Remove the foil and brush the ribs
-                    with BBQ sauce.
-                </li>
-                <li>
-                    Return to the oven for another
-                    10 to 15 minutes.
-                </li>
+                <li>Season the ribs with garlic powder, paprika, salt, and pepper.</li>
+                <li>Wrap the ribs in foil and place them on a baking sheet.</li>
+                <li>Bake for about 2.5 to 3 hours until the ribs are tender and cooked through.</li>
+                <li>Remove the foil and brush the ribs with BBQ sauce.</li>
+                <li>Return to the oven for another 10 to 15 minutes.</li>
                 <li>Slice and serve.</li>
             </ol>
-
             <a class="back" href="#top">Back to Top</a>
-
         </div>
 
-        <!-- Go back to the first BBQ page -->
-        <p>
-            <a class="back" href="./DW_Page1.html">
-                Return to BBQ Home
-            </a>
-        </p>
-
+        <p><a class="back" href="./DW_Page1.html">Return to BBQ Home</a></p>
     </main>
 
-    <!-- Bottom of the page replaced with main footer-->
-     <footer>
-<div class="foot">
-<br>
-<h3> Contact Us </h3>
-<p><a href="mailto:bigemail@gmail.com"> Email us here </a></p>
-<p> Call us: (987)-654-3210 </p>
-<p> Address: S.R.Collins Engineering Building <br> D.W. Martin Street, Prairie View, TX 77445 </p>
-<a href="#top"> Back to Top</a> &nbsp;&nbsp;
-<a href="../index.html"> Back to Home </a>
-</div>
+    <!-- Keep the group's shared footer -->
+    <footer>
+        <div class="foot">
+            <br>
+            <h3>Contact Us</h3>
+            <p><a href="mailto:bigemail@gmail.com">Email us here</a></p>
+            <p>Call us: (987)-654-3210</p>
+            <p>Address: S.R. Collins Engineering Building <br> D.W. Martin Street, Prairie View, TX 77445</p>
+            <a href="#top">Back to Top</a> &nbsp;&nbsp;
+            <a href="../index.html">Back to Home</a>
+        </div>
     </footer>
 
 </body>

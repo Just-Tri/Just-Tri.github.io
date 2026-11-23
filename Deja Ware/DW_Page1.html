@@ -1,275 +1,220 @@
-
+/* Deja Ware */
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BBQ Home</title>
-    <style>
 
-        /* Main BBQ page colors */
-        body {
+    <style>
+        /* Match the group cookbook colors and fonts */
+        body.bbq-site {
             margin: 0;
+            background-color: #FAEBD7;
             color: #292725;
+            font-family: "Redaction", Georgia, serif;
+            line-height: 1.5;
         }
 
-        /* Header and navigation */
-        header {
+        /* Our BBQ banner below the group's navigation */
+        .bbq-hero {
             background-color: #292725;
             color: white;
-            padding: 30px;
             text-align: center;
+            padding: 30px 20px;
+            border-bottom: 4px solid #cc3700;
         }
 
-        nav {
-            margin-top: 20px;
+        .bbq-hero h1 {
+            font-family: "Archivo Black", Arial, sans-serif;
+            margin: 0 0 8px;
         }
 
-        nav a {
+        .bbq-hero p {
+            margin: 0;
+        }
+
+        /* Links between the main site and our BBQ pages */
+        .bbq-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        .bbq-links a {
             color: white;
             text-decoration: none;
-            margin: 15px;
+            border-bottom: 2px solid #cc3700;
+            padding: 4px;
         }
 
-        /* Changes link color when hovered over */
-        nav a:hover {
-            color: #c65d36;
+        .bbq-links a:hover {
+            color: #ffb089;
         }
 
-        /* Keep everything centered */
-        main {
+        /* Only change our BBQ content, not the group menu */
+        main.bbq-main {
             max-width: 1000px;
             margin: auto;
-            padding: 20px;
+            padding: 24px 20px;
         }
 
+        .bbq-main h2 {
+            font-family: "Archivo Black", Arial, sans-serif;
+            color: darkred;
+        }
 
-        section {
+        .bbq-main h3 {
+            font-family: "Archivo Black", Arial, sans-serif;
+            color: #522a1e;
+        }
+
+        .bbq-main section {
             margin-bottom: 40px;
         }
 
-        /* Cooking method boxes side by side */
-        .methods {
+        /* Put cooking methods and recipes next to each other */
+        .bbq-main .methods,
+        .bbq-main .recipes {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 18px;
         }
 
-        .method {
+        .bbq-main .method,
+        .bbq-main .recipe {
             background-color: white;
-            padding: 15px;
-            border: 1px solid #ddd;
+            border: 1px solid #d8c2ae;
+            padding: 18px;
             flex: 1;
+        }
+
+        .bbq-main .method {
             min-width: 180px;
         }
 
-        /* Same idea but for recipe cards */
-        .recipes {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .recipe {
-            background-color: white;
-            padding: 15px;
-            border: 1px solid #ddd;
-            flex: 1;
+        .bbq-main .recipe {
             min-width: 220px;
         }
 
-        /* Keep all recipe images the same size */
-        .recipe img {
+        /* Keep all three recipe pictures the same size */
+        .bbq-main .recipe img {
             width: 100%;
             height: 170px;
             object-fit: cover;
+            border: none;
         }
 
-        .recipe a {
-            color: #c65d36;
+        .bbq-main .recipe a {
+            color: #a9320e;
         }
 
-        /* Explore recipes button */
-        .button {
-            background-color: #c65d36;
+        /* Button that opens the full recipes */
+        .bbq-main .button {
+            background-color: #cc3700;
             color: white;
             padding: 12px 20px;
             text-decoration: none;
             display: inline-block;
         }
 
-        /* Button changes color when hovered over */
-        .button:hover {
-            background-color: #a94726;
+        .bbq-main .button:hover {
+            background-color: #a32d00;
         }
-
-        .foot {
-            color: black;
-        }
-        .foot h3 {
-            color: white;
-        }
-
     </style>
 </head>
 
-<body>
-    <!--Home Button + Navigation-->
+<body id="top" class="bbq-site">
+
+    <!-- Group's cookbook logo and dropdown navigation -->
     <script src="../Tri Vu/TV_Home_Nav.js"></script>
 
-    <!-- BBQ header -->
-    <header>
+    <!-- Our own BBQ section heading -->
+    <div class="bbq-hero">
         <h1>BBQ Recipes</h1>
         <p>Come ready to find your next cookout recipe!</p>
 
-        <!-- Links to the main site and my BBQ pages -->
-        <nav>
-            <a href="../index.html">Home</a>
+        <div class="bbq-links">
+            <a href="../index.html">Main Cookbook</a>
             <a href="./DW_Page1.html">BBQ Home</a>
-            <a href="./DW_Page2.html">BBQ Recipes</a>
-        </nav>
-    </header>
+            <a href="./DW_Page2.html">All BBQ Recipes</a>
+        </div>
+    </div>
 
-    <main>
+    <main class="bbq-main">
 
-        <!-- Intro to the BBQ section -->
+        <!-- Introduction -->
         <section>
             <h2>Welcome to the Smokin' BBQ Hub</h2>
-
             <p>
-                BBQ can be made in many different ways.
-                Some people like smokin' meat for hours
-                for that smoky flavor, while others
-                enjoy grilling with a side of BBQ sauce
-                or using the oven.
-
-                Here we don't judge. You can learn
-                about different BBQ cooking methods
-                and find recipes to try at home today.
+                BBQ can be made in many different ways. Some people like smokin'
+                meat for hours for that smoky flavor, while others enjoy grilling
+                with a side of BBQ sauce or using the oven. Here we don't judge.
+                You can learn about different BBQ cooking methods and find recipes
+                to try at home today.
             </p>
         </section>
 
-        <!-- Different BBQ cooking styles -->
+        <!-- Four different BBQ cooking styles -->
         <section>
             <h2>BBQ Cooking Styles</h2>
-
-            <!-- Grouping boxes so flex can line them up -->
             <div class="methods">
-
                 <div class="method">
                     <h3>Smoking</h3>
-                    <p>
-                        Smoking uses low heat, a lot of time,
-                        and of course a smoker.
-                        The smoker slowly cooks the meat
-                        while adding that smoky flavor.
-                    </p>
+                    <p>Smoking uses low heat, a lot of time, and of course a smoker. The smoker slowly cooks the meat while adding that smoky flavor.</p>
                 </div>
 
                 <div class="method">
                     <h3>Grilling</h3>
-                    <p>
-                        Grilling is the way to go if you
-                        are trying to get the job done quickly.
-                        It usually uses high heat and can
-                        cook directly over the flame.
-                        This method is great for steaks,
-                        burgers, and hot dogs.
-                    </p>
+                    <p>Grilling gets the job done quickly. It usually uses high heat and cooks over the flame. This method is great for steaks, burgers, and hot dogs.</p>
                 </div>
 
                 <div class="method">
                     <h3>Indirect Heat</h3>
-                    <p>
-                        Indirect cooking keeps food away
-                        from direct flames and cooks it
-                        more slowly. This works well
-                        for larger cuts of meat.
-                    </p>
+                    <p>Indirect cooking keeps food away from direct flames and cooks it more slowly. This works well for larger cuts of meat.</p>
                 </div>
 
                 <div class="method">
                     <h3>Oven BBQ</h3>
-                    <p>
-                        The oven is a great way to cook
-                        BBQ indoors or if you do not
-                        want to buy a smoker or grill.
-                        It uses controlled heat and is
-                        great for ribs, chicken,
-                        and pulled pork.
-                    </p>
+                    <p>The oven is a great way to cook BBQ indoors if you do not have a smoker or grill. It uses controlled heat and works well for ribs and chicken.</p>
                 </div>
-
             </div>
         </section>
 
-        <!-- Our three BBQ recipes -->
+        <!-- The three BBQ recipe cards -->
         <section>
             <h2>Featured BBQ Recipes</h2>
-
             <p>Check out some of our BBQ favorites.</p>
 
-            <!-- Recipe cards -->
             <div class="recipes">
-
-                <!-- Brisket -->
                 <div class="recipe">
-                    <img src="images/brisket.jpg"
-                         alt="Smoked Brisket">
-
+                    <img src="images/brisket.jpg" alt="Smoked Brisket">
                     <h3>Smoked Brisket</h3>
-
-                    <p>
-                        Beef brisket cooked slowly
-                        with BBQ seasoning.
-                    </p>
-
-                    <!-- #brisket opens the brisket recipe on page 2 -->
-                    <a href="./DW_Page2.html#brisket">
-                        View Recipe
-                    </a>
+                    <p>Beef brisket cooked slowly with BBQ seasoning.</p>
+                    <a href="./DW_Page2.html#brisket">View Recipe</a>
                 </div>
 
-                <!-- Honey BBQ Chicken -->
                 <div class="recipe">
-                    <img src="images/chicken.jpg"
-                         alt="Honey BBQ Chicken">
-
+                    <img src="images/chicken.jpg" alt="Honey BBQ Chicken">
                     <h3>Honey BBQ Chicken</h3>
-
-                    <p>
-                        Grilled chicken covered
-                        in a sweet honey BBQ sauce.
-                    </p>
-
-                    <a href="./DW_Page2.html#chicken">
-                        View Recipe
-                    </a>
+                    <p>Grilled chicken covered in a sweet honey BBQ sauce.</p>
+                    <a href="./DW_Page2.html#chicken">View Recipe</a>
                 </div>
 
-                <!-- BBQ Ribs -->
                 <div class="recipe">
-                    <img src="images/ribs.jpg"
-                         alt="BBQ Ribs">
-
+                    <img src="images/ribs.jpg" alt="BBQ Ribs">
                     <h3>BBQ Ribs</h3>
-
-                    <p>
-                        Tender ribs coated in BBQ sauce
-                        and baked until flavorful.
-                    </p>
-
-                    <a href="./DW_Page2.html#ribs">
-                        View Recipe
-                    </a>
+                    <p>Tender ribs coated in BBQ sauce and baked until flavorful.</p>
+                    <a href="./DW_Page2.html#ribs">View Recipe</a>
                 </div>
-
             </div>
         </section>
 
-        <!-- Tips for people new to BBQ -->
+        <!-- Tips for new BBQ cooks -->
         <section>
             <h2>BBQ Tips for Beginners</h2>
-
             <ul>
                 <li>Season your meat before cooking.</li>
                 <li>Preheat your grill before using it.</li>
@@ -277,25 +222,21 @@
                 <li>Let meat rest before cutting it.</li>
             </ul>
 
-            <!-- Opens page 2 with all our recipes -->
-            <a class="button" href="./DW_Page2.html">
-                Explore All Recipes
-            </a>
+            <a class="button" href="./DW_Page2.html">Explore All Recipes</a>
         </section>
-
     </main>
 
-    <!-- Bottom of the BBQ page (replaced with added footer) -->
-     <footer>
-<div class="foot">
-<br>
-<h3> Contact Us </h3>
-<p><a href="mailto:bigemail@gmail.com"> Email us here </a></p>
-<p> Call us: (987)-654-3210 </p>
-<p> Address: S.R.Collins Engineering Building <br> D.W. Martin Street, Prairie View, TX 77445 </p>
-<a href="#top"> Back to Top</a> &nbsp;&nbsp;
-<a href="../index.html"> Back to Home </a>
-</div>
+    <!-- Keep the group's shared footer -->
+    <footer>
+        <div class="foot">
+            <br>
+            <h3>Contact Us</h3>
+            <p><a href="mailto:bigemail@gmail.com">Email us here</a></p>
+            <p>Call us: (987)-654-3210</p>
+            <p>Address: S.R. Collins Engineering Building <br> D.W. Martin Street, Prairie View, TX 77445</p>
+            <a href="#top">Back to Top</a> &nbsp;&nbsp;
+            <a href="../index.html">Back to Home</a>
+        </div>
     </footer>
 
 </body>
