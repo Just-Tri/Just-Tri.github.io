@@ -61,3 +61,10 @@
     text-decoration: none;
     display: block;
 }
+
+
+/* Keep last dropdown on screen */
+.nav-menu > .nav-item:last-child > .nav-dropdown {
+    left: auto;
+    right: 0;
+}
