@@ -94,7 +94,6 @@
                                 <li class="nav-dropdown-item"><a href="../Deja Ware/DW_Page1.html" class="nav-link">BBQ Portal</a></li>
                                 <li class="nav-dropdown-item"><a href="../Deja Ware/DW_Page2.html#brisket" class="nav-link">Smoked Brisket</a></li>
                                 <li class="nav-dropdown-item"><a href="../Deja Ware/DW_Page2.html#chicken" class="nav-link">Honey BBQ Chicken</a></li>
-                                <li class="nav-dropdown-item"><a href="../Deja Ware/DW_Page2.html#ribs" class="nav-link">BBQ Ribs</a></li>
                             </ul>
                         </li>
                     </ul>
